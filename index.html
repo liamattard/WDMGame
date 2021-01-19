@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/button.css">
+    <link rel="stylesheet" href="stylesheets/animations.css">
+    <link rel="stylesheet" href="stylesheets/timeline.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <script src="scripts/script.js"></script>
+    <script src="scripts/generateStory.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <title>Web Data Mining Game</title>
+</head>
+
+<body>
+
+    <!-- Game Content will be loaded here -->
+    <div id="body">
+
+    </div>
+
+
+    <!-- Intro Titles -->
+    <div id="intro">
+
+        <h1 id="intro_title">Urban Ministries of Durham serves over
+            6,000 people every year. But you'd never need help,
+            right?</h1>
+        <button id="start_btn" onclick="startStory()">Accept The
+            Challenge</button>
+
+    </div>
+    
+    <div id="timeline" class="timeline active" >
+
+        <span id="current_day" class="current_day no_opacity">
+            <h5>Day</h5>
+            <hr>
+            <h1 id="date"></h1>
+        </span>
+
+    </div>
+
+    <div id="balance" class="details no_opacity">
+        <h5>BALANCE</h5>
+        <hr>
+        <h1><span id="euro_sign">€</span><span
+        id="balance_value">0</span></h1>
+    </div>
+
+    <div id="progress_bar" class="no_opacity">
+
+        <h5 id="health_label">HEALTH</h5>
+        <h5 id="health_score">100</h5>
+        <div id="meter" class="meter no_opacity">
+            <span id="health_value"></span>
+        </div>
+
+    </div>
+
+    <div id="happiness_bar" class="no_opacity">
+
+        <h5 id="happiness_label">Happiness</h5>
+        <h5 id="happiness_score">100</h5>
+        <div id="meterTwo" class="meterTwo no_opacity">
+            <span id="happiness_value"></span>
+        </div>
+
+    </div>
+    <script src="scripts/data.js"></script>
+
+</body>
+
+</html>

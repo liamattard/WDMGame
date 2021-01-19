@@ -1,0 +1,74 @@
+{
+    "name": "Choose A Job",
+    "children": [
+        {
+            "name": "Nursery Teacher",
+            "children": [
+                {
+                    "name": "cluster",
+                    "children": [
+                        {
+                            "name": "AgglomerativeCluster"
+                        },
+                        {
+                            "name": "CommunityStructure"
+                        },
+                        {
+                            "name": "HierarchicalCluster"
+                        },
+                        {
+                            "name": "MergeEdge"
+                        }
+                    ]
+                },
+                {
+                    "name": "graph",
+                    "children": [
+                        {
+                            "name": "BetweennessCentrality"
+                        },
+                        {
+                            "name": "LinkDistance"
+                        },
+                        {
+                            "name": "MaxFlowMinCut"
+                        },
+                        {
+                            "name": "ShortestPaths"
+                        },
+                        {
+                            "name": "SpanningTree"
+                        }
+                    ]
+                },
+                {
+                    "name": "optimization",
+                    "children": [
+                        {
+                            "name": "AspectRatioBanker"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Buy food",
+            "children": [
+                {
+                    "name": "Buy Clothes",
+                    "children": [
+                        {
+                            "name": "Study"
+                        },
+                        {
+                            "name": "Play"
+                        }
+                    ]
+                },
+                {
+                    "name": "Buy Gift"
+                }
+            ]
+        }
+    ]
+}

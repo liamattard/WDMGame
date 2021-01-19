@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Oldenburg&display=swap');
+html, body {
+    overflow-x: hidden;
+    height: 100%;
+    font-family: 'Oldenburg', cursive!important;
+    background: rgba(26, 33, 38, 1);
+    /* background: linear-gradient(17deg, rgba(40,53,62,1) 0%, rgba(26,33,38,1) 48%); */
+}
+
+#body {
+    height: auto;
+    margin: auto;
+    display: none;
+    position: absolute!important;
+    top: 0px;
+    transition: all 1s ease;
+}
+
+#intro {
+    width: 40%;
+    padding: 10px;
+    margin: auto!important;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: bisque;
+    /* display: none; */
+}
+
+#progress_bar {
+    position: relative;
+    left: 15px;
+    top: 95%;
+    transform: rotate(270deg);
+    transform-origin: top left;
+}
+
+#happiness_bar{
+    position: relative;
+    left: 15px;
+    top: 95%;
+    transform: rotate(270deg);
+    transform-origin: top left;
+}
+
+#health_label {
+    left: -10px;
+    bottom: -5px;
+    color: bisque;
+    position: absolute;
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+
+#health_score {
+
+    left: -30px;
+    bottom: -5px;
+    color: bisque;
+    position: absolute;
+    transform: rotate(90deg);
+    transform-origin: top left;
+
+}
+
+#happiness_label{
+    margin-left: 20px;
+    top: 70px; 
+    bottom: -5px;
+    color: bisque;
+    position: absolute;
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+
+#happiness_score{
+    top: 70px; 
+    bottom: -5px;
+    color: bisque;
+    position: absolute;
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+
+.details {
+    color: bisque;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+#euro_sign {
+    color: rgb(131, 25, 25);
+    margin-right: 1vh;
+}
+
+.meter {
+    width: 35vh;
+    height: 20px;
+    /* Can be anything */
+    position: relative;
+    top: 10px;
+    background: #555;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+    padding: 5px;
+    box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.meter>span {
+    display: block;
+    height: 100%;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    /* background-color: rgb(43,194,83);
+    background-image: linear-gradient(
+      center bottom,
+      rgb(75, 56, 243) 37%,
+      rgb(80, 221, 80) 69%
+    ); */
+    background: rgb(95, 26, 14);
+    background: linear-gradient(6deg, rgb(92, 19, 19) 0%, rgb(167, 18, 18) 70%);
+    box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.52), inset 0 -2px 6px rgba(0, 0, 0, 0.705);
+    position: relative;
+    overflow: hidden;
+}
+
+.meterTwo {
+    width: 35vh;
+    height: 20px;
+    /* Can be anything */
+    position: relative;
+    top: 110px;
+    left: 30px;
+    background: #555;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+    padding: 5px;
+    box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.meterTwo>span {
+    display: block;
+    height: 100%;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    /* background-color: rgb(43,194,83);
+    background-image: linear-gradient(
+      center bottom,
+      rgb(75, 56, 243) 37%,
+      rgb(80, 221, 80) 69%
+    ); */
+    background: rgb(95, 156, 14);
+    background: linear-gradient(6deg, rgb(92, 152, 19) 0%, rgb(167, 152, 18) 70%);
+    box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.52), inset 0 -2px 6px rgba(0, 0, 0, 0.705);
+    position: relative;
+    overflow: hidden;
+}
+
+svg{
+    margin: auto;
+    display: block;
+    width: auto!important;
+    max-width: 100%!important;
+    height: auto!important;
+    max-height: 100%!important;
+}
+
+.node text {
+    font-size: 10px;
+  }
+  
+.link {
+    fill: none;
+    stroke: rgb(77, 77, 77);
+}
