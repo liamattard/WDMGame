@@ -31,7 +31,7 @@ class CurrentPlayer{
 
     calculate_health(value, op){
 
-        var current_health= health;
+        var current_health= this.health;
 
         if(op=="-"){
             this.health = this.health-value;
@@ -45,7 +45,7 @@ class CurrentPlayer{
         // document.getElementById("health_value").style.width = this.health.toString()+"%";
 
 
-        document.getElementById("health_value").style.width = health.toString()+"%";
+        document.getElementById("health_value").style.width = this.health.toString()+"%";
 
         const obj = document.getElementById("health_percentage");
         animateValue(obj, current_health, this.health, 5000);
@@ -55,6 +55,8 @@ class CurrentPlayer{
 
     calculate_happiness(value, op){
 
+        var current_happiness = this.happiness;
+
         if(op == "-"){
             this.happiness= this.happiness-value;
         }
@@ -62,9 +64,27 @@ class CurrentPlayer{
             this.health = this.happiness+value;
         }
 
-        document.getElementById("happiness_score").innerHTML = this.happiness;
-        document.getElementById("happiness_value").style.transition = "all 1s";
-        document.getElementById("happiness_value").style.width = this.happiness.toString()+"%";
+        document.getElementById("happiness_label").innerHTML = this.happiness;
+
+        
+        const obj = document.getElementById("happiness_label");
+        animateValue(obj, current_happiness, this.happiness, 2000);
+
+        if( this.happiness > 75){
+            document.getElementById("rotate_cube").style.transform = "rotateY(0deg)";
+        }else if( this.happiness > 50){
+            document.getElementById("rotate_cube").style.transform = "rotateY(-90deg)";
+
+        }else if( this.happiness > 25){
+            document.getElementById("rotate_cube").style.transform = "rotateY(-180deg)";
+
+        }else if( this.happiness > 0){
+            document.getElementById("rotate_cube").style.transform = "rotateY(-270deg)";
+
+        }
+        
+        // document.getElementById("happiness_value").style.transition = "all 1s";
+        // document.getElementById("happiness_value").style.width = this.happiness.toString()+"%";
 
     }
 
@@ -186,14 +206,27 @@ function removeIntro(){
     document.getElementById("meter").classList.add("fadeIn");
 
     // Show Happiness Bar
-    document.getElementById("happiness_bar").classList.remove("no_opacity");
-    document.getElementById("meterTwo").classList.remove("no_opacity");
-    document.getElementById("happiness_bar").classList.add("fadeIn");
-    document.getElementById("meterTwo").classList.add("fadeIn");
+    document.getElementById("cube_scene").classList.remove("no_opacity");
+    // document.getElementById("meterTwo").classList.remove("no_opacity");
+    document.getElementById("cube_scene").classList.add("fadeIn");
+    // document.getElementById("meterTwo").classList.add("fadeIn");
 
     // Show Current Day
     document.getElementById("current_day").classList.remove("no_opacity");
     document.getElementById("current_day").classList.add("fadeIn");
+
+    
+    setTimeout(function(){ currentPlayer.calculate_happiness(20, "-");console.log(currentPlayer.happiness)
+
+
+
+    setTimeout(function(){ currentPlayer.calculate_happiness(20, "-");console.log(currentPlayer.happiness) 
+    setTimeout(function(){ currentPlayer.calculate_happiness(20, "-");console.log(currentPlayer.happiness) 
+    setTimeout(function(){ currentPlayer.calculate_happiness(20, "-");console.log(currentPlayer.happiness) 
+    setTimeout(function(){ currentPlayer.calculate_happiness(-60, "-");console.log(currentPlayer.happiness) },1000);},1000);},1000);},1000);
+
+},1000);
+
 
 }
 

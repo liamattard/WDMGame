@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheets/button.css">
-    <link rel="stylesheet" href="stylesheets/animations.css">
-    <link rel="stylesheet" href="stylesheets/timeline.css">
-    <link rel="stylesheet" href="stylesheets/style.css">
-    <link rel="stylesheet" href="stylesheets/smiley.css">
-    <script src="scripts/script.js"></script>
-    <script src="scripts/generateStory.js"></script>
+    <link rel="stylesheet" href="public/stylesheets/button.css">
+    <link rel="stylesheet" href="public/stylesheets/animations.css">
+    <link rel="stylesheet" href="public/stylesheets/timeline.css">
+    <link rel="stylesheet" href="public/stylesheets/style.css">
+    <link rel="stylesheet" href="public/stylesheets/smiley.css">
+    <script src="public/scripts/script.js"></script>
+    <script src="public/scripts/data.js"></script>
+    <script src="public/scripts/generateStory.js"></script>
     <script src="https://d3js.org/d3.v3.min.js"></script>
     <title>Web Data Mining Game</title>
 </head>
@@ -64,16 +65,17 @@
     </div>
 
     <div id="progress_bar" class="no_opacity">
-        <h5 class="health_percentage"><span id="health_percentage">100</span><span>%</span></h5 <h5 id="health_label">
-        HEALTH</h5>
-        <h5 id="health_score">100</h5>
+        <h5 class="health_percentage"><span id="health_percentage">100</span><span>%</span></h5>
+        
+        <h5 id="health_label"> HEALTH</h5>
+       
         <div id="meter" class="meter no_opacity">
             <span id="health_value"></span>
         </div>
 
     </div>
 
-    <div id="happiness_bar" class="no_opacity">
+    <!-- <div id="happiness_bar" class="no_opacity">
 
         <h5 id="happiness_label">Happiness</h5>
         <h5 id="happiness_score">100</h5>
@@ -81,20 +83,21 @@
             <span id="happiness_value"></span>
         </div>
 
-    </div>
+    </div> -->
 
 
-    <div class="cube_scene">
-        <div class="cube">
-            <div class="side back"></div>
-            <div class="side left"></div>
-            <div class="side right"></div>
-            <div class="side front"></div>
+    <div id="cube_scene" class="cube_scene no_opacity">
+        <div class="cube" id="rotate_cube">
+          <div class="side back"></div>
+          <div class="side left"></div>
+          <div class="side right"></div>
+          <div class="side front"></div>
         </div>
         <h5 class="happiness_label"><span id="happiness_label">100</span><span>%</span></h5>
 
+        <h5>HEALTH</h5>
+    </div>
 
-        <script src="scripts/data.js"></script>
 
 </body>
 
