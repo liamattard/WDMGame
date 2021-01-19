@@ -59,10 +59,10 @@ var i = 0,
     body_top = 0,
     duration = 1500,
     rectW = 90,
-    rectH = 50;
+    rectH = 25;
 
 
-var tree = d3.layout.tree().nodeSize([100, 70]);
+var tree = d3.layout.tree().nodeSize([190, 70]);
 var diagonal = d3.svg.diagonal()
     .projection(function (d) {
         return [d.x + rectW / 2, d.y + rectH / 2];
@@ -73,7 +73,7 @@ var svg = d3.select("#body").append("svg").attr("width", 2000).attr("height", 70
     .call(zm = d3.behavior.zoom().scaleExtent([1, 3]).on("zoom", null)).append("g")
     .attr("transform", "translate(" + screen.width / 2.5 + "," + screen.height / 7 + ")scale(2.5,2.5)");
 
-//necessary so that zoom knows where to zoom and unzoom from
+//necessary so that zoom 9nows where to zoom and unzoom from
 zm.translate([350, 20]).scale(2.5);;
 
 root.x0 = 0;
@@ -91,6 +91,7 @@ root.children.forEach(collapse);
 update(root);
 
 d3.select("#body").style("height", screen.height);
+
 
 
 function update(source) {
@@ -118,17 +119,32 @@ function update(source) {
     })
         .on("click", click);
   
+        
+  
     nodeEnter.append("rect")
-        .attr("width", rectW)
-        .attr("height", rectH)
+        .attr("class", "title")
+  
+        .attr("width", rectW*1.5)
+      //   .attr("height", "25px")
         .attr("rx", 6)
         .attr("ry", 6)
         .attr("stroke", "gray")
         .attr("stroke-width", 1)
         .style("fill", "#ffff");
+  
+        nodeEnter.append("rect")
+        .attr("width", rectW*2)
+        .attr("height", rectH*2)
+        .attr("rx", 6)
+        .attr("ry", 6)
+        .attr("x", -50)
+        .attr("y", 35)
+        .attr("stroke", "gray")
+        .attr("stroke-width", 1)
+        .style("fill", "#ffff");
     
   
-    nodeEnter.append("text")
+        nodeEnter.append("text")
         .attr("x", rectW / 2)
         .attr("y", rectH / 2)
         .attr("dy", ".35em")
@@ -136,6 +152,83 @@ function update(source) {
         .text(function (d) {
         return d.name;
     });
+  
+    nodeEnter.append("text")
+        .attr("class", "description")
+        .attr("x", rectW / 2)
+        .attr("y", rectH*2)
+        .attr("dy", ".35em")
+        .attr("text-anchor", "middle")
+        .text(function (d) {
+        return "U aqbad u ixtri din id-dar chicken";
+    }) ;
+  
+  
+    nodeEnter.append("text")
+        .attr("class", "attributes")
+        .attr("x", -rectW / 3)
+        .attr("y", rectH*3.1)
+        .attr("dy", ".35em")
+        .attr("text-anchor", "middle")
+        .text(function (d) {
+        return "Health";
+    }) ;
+    nodeEnter.append("text")
+        .attr("class", "attribute_values")
+        .attr("x", -rectW / 3)
+        .attr("y", rectH*2.8)
+        .attr("dy", ".35em")
+        .attr("fill", " rgb(100, 195, 50)")
+        .attr("text-anchor", "middle")
+        .text(function (d) {
+        return "+10";
+    }) ;
+  
+  
+  
+  
+    nodeEnter.append("text")
+        .attr("class", "attributes")
+        .attr("x", "105px" )
+        .attr("y", rectH*3.1)
+        .attr("dy", ".35em")
+        .attr("text-anchor", "middle")
+        .text(function (d) {
+        return "Happiness";
+    }) ;
+    nodeEnter.append("text")
+        .attr("class", "attribute_values")
+        .attr("x", "105px" )
+        .attr("y", rectH*2.8)
+        .attr("dy", ".35em")
+        .attr("fill", " rgb(131, 25, 25)")
+        .attr("text-anchor", "middle")
+        .text(function (d) {
+        return "-10";
+    }) ;
+  
+  
+   
+  
+    nodeEnter.append("text")
+    .attr("class", "attributes")
+    .attr("x", rectW / 2.3)
+    .attr("y", rectH*3.1)
+    .attr("dy", ".35em")
+    .attr("text-anchor", "middle")
+    .text(function (d) {
+    return "Money";
+   }) ;
+   nodeEnter.append("text")
+   .attr("class", "attribute_values")
+   .attr("x", rectW / 2.3)
+   .attr("y", rectH*2.8)
+   .attr("dy", ".35em")
+   .attr("text-anchor", "middle")
+   .attr("fill", "rgb(100, 195, 50)")
+   .text(function (d) {
+   return "+10";
+  }) ;
   
     // Transition nodes to their new position.
     var nodeUpdate = node.transition()
@@ -147,6 +240,7 @@ function update(source) {
     nodeUpdate.select("rect")
         .attr("width", rectW)
         .attr("height", rectH)
+       
         .attr("rx", 6)
         .attr("ry", 6)
         .attr("stroke", "gray")
@@ -167,8 +261,8 @@ function update(source) {
     nodeExit.select("rect")
         .attr("width", rectW)
         .attr("height", rectH)
-        //.attr("width", bbox.getBBox().width)""
-        //.attr("height", bbox.getBBox().height)
+      //   .attr("width", bbox.getBBox().width)
+      //   .attr("height", bbox.getBBox().height)
         .attr("rx", 6)
         .attr("ry", 6)
         .attr("stroke", "gray")

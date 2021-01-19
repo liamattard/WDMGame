@@ -31,6 +31,8 @@ class CurrentPlayer{
 
     calculate_health(value, op){
 
+        var current_health= health;
+
         if(op=="-"){
             this.health = this.health-value;
         }
@@ -38,9 +40,16 @@ class CurrentPlayer{
             this.health = this.health+value;
         }
 
-        document.getElementById("health_score").innerHTML = this.health;
-        document.getElementById("health_value").style.transition = "all 1s";
-        document.getElementById("health_value").style.width = this.health.toString()+"%";
+        // document.getElementById("health_score").innerHTML = this.health;
+        // document.getElementById("health_value").style.transition = "all 1s";
+        // document.getElementById("health_value").style.width = this.health.toString()+"%";
+
+
+        document.getElementById("health_value").style.width = health.toString()+"%";
+
+        const obj = document.getElementById("health_percentage");
+        animateValue(obj, current_health, this.health, 5000);
+
 
     }
 
@@ -79,6 +88,8 @@ class CurrentPlayer{
     }
 }
 
+var line=0;
+
 let currentPlayer = new CurrentPlayer();
 
 
@@ -99,7 +110,7 @@ function startStory() {
     setTimeout(function(){currentPlayer.calculate_happiness(0, "+"); },2000);
     
 
-    setTimeout(runIntro, 1000);
+    setTimeout(runStory, 1000);
 
 }
 
@@ -127,13 +138,27 @@ function setDays(){
 }
 
 
-function runIntro(){
+function runStory(){
 
-    // TODO:Add intro animation
+    story = line.toString();
+    console.log(story)
+    document.getElementById(story).classList.add("text_anim");
 
-    removeIntro();
+    setTimeout(function() {   
+        story = line.toString();
+        console.log(story)
+        document.getElementById(story).classList.add("text_anim");
 
+        line++;                   
+        if (line < 6) {            
+            runStory();              
+        }else{
+            
+            removeIntro();
+        }                   
+      }, 1000)
 }
+
 
 function removeIntro(){
 

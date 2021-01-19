@@ -1,0 +1,49 @@
+.cube {
+    transform-style: preserve-3d;
+    position: relative;
+    
+    width: 150px;
+    height: 150px;
+    animation: rotate 10s ease-in-out infinite;
+    transform-origin: center center;
+  }
+  
+.cube_scene{
+    text-align: center;
+    position: fixed;
+    bottom: 10px;
+    right: 150px;
+    color: bisque;
+
+}
+
+  .side {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: #333;
+    opacity: .95;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .back {
+    transform: rotateY(180deg) translate3d(0, 0, 75px);
+    background-image: url("assets/face_3.png");
+  }
+  
+  .left {
+    transform: rotateY(-90deg) translate3d(0, 0, 75px);
+    background-image: url("assets/face_4.png");
+  }
+  
+  .right {
+    transform: rotateY(90deg) translate3d(0, 0, 75px);
+    background-image: url("assets/face_2.png");
+  }
+  
+  
+  .front {
+    transform: translate3d(0, 0, 75px);
+    background-image: url("assets/face_1.png");
+  }

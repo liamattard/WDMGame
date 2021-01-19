@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="stylesheets/animations.css">
     <link rel="stylesheet" href="stylesheets/timeline.css">
     <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/smiley.css">
     <script src="scripts/script.js"></script>
     <script src="scripts/generateStory.js"></script>
     <script src="https://d3js.org/d3.v3.min.js"></script>
@@ -28,12 +29,25 @@
         <h1 id="intro_title">Urban Ministries of Durham serves over
             6,000 people every year. But you'd never need help,
             right?</h1>
+
+        <h1 class="text" id="0"> Over 45,000 Maltese people are
+        unemployed</h1>
+        <h1 class="text" id="1"> Now imagine you're one of them</h1>
+        <h1 class="text" id="2"> Your savings are gone</h1>
+        <h1 class="text" id="3"> You've lost your house</h1>
+        <h1 class="text" id="4"> and you're down to your last
+        €1,000</h1>
+        <h1 class="text" id="5"> Can you make it through the
+        month?</h1>
+
+
+
         <button id="start_btn" onclick="startStory()">Accept The
             Challenge</button>
 
     </div>
-    
-    <div id="timeline" class="timeline active" >
+
+    <div id="timeline" class="timeline active">
 
         <span id="current_day" class="current_day no_opacity">
             <h5>Day</h5>
@@ -46,13 +60,12 @@
     <div id="balance" class="details no_opacity">
         <h5>BALANCE</h5>
         <hr>
-        <h1><span id="euro_sign">€</span><span
-        id="balance_value">0</span></h1>
+        <h1><span id="euro_sign">€</span><span id="balance_value">0</span></h1>
     </div>
 
     <div id="progress_bar" class="no_opacity">
-
-        <h5 id="health_label">HEALTH</h5>
+        <h5 class="health_percentage"><span id="health_percentage">100</span><span>%</span></h5 <h5 id="health_label">
+        HEALTH</h5>
         <h5 id="health_score">100</h5>
         <div id="meter" class="meter no_opacity">
             <span id="health_value"></span>
@@ -69,7 +82,19 @@
         </div>
 
     </div>
-    <script src="scripts/data.js"></script>
+
+
+    <div class="cube_scene">
+        <div class="cube">
+            <div class="side back"></div>
+            <div class="side left"></div>
+            <div class="side right"></div>
+            <div class="side front"></div>
+        </div>
+        <h5 class="happiness_label"><span id="happiness_label">100</span><span>%</span></h5>
+
+
+        <script src="scripts/data.js"></script>
 
 </body>
 

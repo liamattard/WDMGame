@@ -30,14 +30,14 @@ html, body {
 }
 
 #progress_bar {
-    position: relative;
+    position: fixed ;
     left: 15px;
     top: 95%;
     transform: rotate(270deg);
     transform-origin: top left;
 }
 
-#happiness_bar{
+#happiness_bar {
     position: relative;
     left: 15px;
     top: 95%;
@@ -55,28 +55,44 @@ html, body {
 }
 
 #health_score {
-
     left: -30px;
     bottom: -5px;
     color: bisque;
     position: absolute;
     transform: rotate(90deg);
     transform-origin: top left;
-
 }
 
-#happiness_label{
-    margin-left: 20px;
-    top: 70px; 
+#health_value{
+    width: 100%;
+    transition: all 1s ease;
+}
+
+
+.health_percentage{
+    
+    left: 10px;
+    bottom: -15px;
+    transform: rotate(90deg);
+    transform-origin: top left;
+    position: absolute;
+    color: bisque;
+}
+
+
+#happiness_label {
+    margin: 5px 0 2px 0;
+    /* margin-left: 20px;
+    top: 70px;
     bottom: -5px;
     color: bisque;
     position: absolute;
     transform: rotate(90deg);
-    transform-origin: top left;
+    transform-origin: top left; */
 }
 
-#happiness_score{
-    top: 70px; 
+#happiness_score {
+    top: 70px;
     bottom: -5px;
     color: bisque;
     position: absolute;
@@ -103,6 +119,7 @@ html, body {
     /* Can be anything */
     position: relative;
     top: 10px;
+    left: 20px;
     background: #555;
     -moz-border-radius: 25px;
     -webkit-border-radius: 25px;
@@ -166,7 +183,7 @@ html, body {
     overflow: hidden;
 }
 
-svg{
+svg {
     margin: auto;
     display: block;
     width: auto!important;
@@ -177,9 +194,39 @@ svg{
 
 .node text {
     font-size: 10px;
-  }
-  
+}
+
 .link {
     fill: none;
     stroke: rgb(77, 77, 77);
+}
+
+.node_description {
+    position: absolute;
+    text-align: left;
+    width: 100px;
+    height: 80px;
+    padding: 8px;
+    font: 10px sans-serif;
+    background: #ddd;
+    border: solid 1px #aaa;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+.node .description {
+    font-size: 7px;
+}
+
+.node .attributes {
+    font-size: 5px;
+}
+
+.node .attribute_values {
+    font-size: 7px;
+    font-weight: bolder;
+}
+
+.node title{
+    height: 25px!important;
 }
