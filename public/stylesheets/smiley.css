@@ -2,8 +2,8 @@
     transform-style: preserve-3d;
     position: relative;
     transform: rotateY(0);
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     transition: all 2s ease-in-out ;
     transform-origin: center center;
   }
@@ -19,8 +19,8 @@
 
   .side {
     position: absolute;
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     background-color: #333;
     opacity: .95;
     background-size: cover;
@@ -28,23 +28,23 @@
   }
   
   .back {
-    transform: rotateY(180deg) translate3d(0, 0, 75px);
+    transform: rotateY(180deg) translate3d(0, 0, 50px);
     background-image: url("../assets/face_3.png");
   }
   
   .left {
-    transform: rotateY(-90deg) translate3d(0, 0, 75px);
+    transform: rotateY(-90deg) translate3d(0, 0, 50px);
     background-image: url("../assets/face_4.png");
   }
   
   .right {
-    transform: rotateY(90deg) translate3d(0, 0, 75px);
+    transform: rotateY(90deg) translate3d(0, 0, 50px);
     background-image: url("../assets/face_2.png");
   }
   
   
   .front {
-    transform: translate3d(0, 0, 75px);
+    transform: translate3d(0, 0, 50px);
     background-image: url("../assets/face_1.png");
   }
 

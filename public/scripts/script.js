@@ -176,7 +176,7 @@ function runStory(){
             
             removeIntro();
         }                   
-      }, 1000)
+      }, 500)
 }
 
 
@@ -216,16 +216,16 @@ function removeIntro(){
     document.getElementById("current_day").classList.add("fadeIn");
 
     
-    setTimeout(function(){ currentPlayer.calculate_happiness(20, "-");console.log(currentPlayer.happiness)
+//     setTimeout(function(){ currentPlayer.calculate_happiness(20, "-");console.log(currentPlayer.happiness)
 
 
 
-    setTimeout(function(){ currentPlayer.calculate_happiness(20, "-");console.log(currentPlayer.happiness) 
-    setTimeout(function(){ currentPlayer.calculate_happiness(20, "-");console.log(currentPlayer.happiness) 
-    setTimeout(function(){ currentPlayer.calculate_happiness(20, "-");console.log(currentPlayer.happiness) 
-    setTimeout(function(){ currentPlayer.calculate_happiness(-60, "-");console.log(currentPlayer.happiness) },1000);},1000);},1000);},1000);
+//     setTimeout(function(){ currentPlayer.calculate_happiness(20, "-");console.log(currentPlayer.happiness) 
+//     setTimeout(function(){ currentPlayer.calculate_happiness(20, "-");console.log(currentPlayer.happiness) 
+//     setTimeout(function(){ currentPlayer.calculate_happiness(20, "-");console.log(currentPlayer.happiness) 
+//     setTimeout(function(){ currentPlayer.calculate_happiness(-60, "-");console.log(currentPlayer.happiness) },2000);},2000);},2000);},2000);
 
-},1000);
+// },2000);
 
 
 }

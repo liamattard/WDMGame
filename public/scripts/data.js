@@ -8,6 +8,19 @@ function click(d) {
         var shift_value = body_top.toString();
         document.getElementById("body").style.top = shift_value + "px";
         document.getElementById("body").style.height = shift_value + "px";
+        
+        var shift_hor = move((d.parent.children).length, (d.parent.children).indexOf(d));
+        console.log("din",Math.abs(shift_hor))
+        document.getElementById("body").style.left = shift_hor.toString() + "px";
+
+
+        body_width = body_width + 200;
+        document.getElementById("body").style.width = body_width.toString()  + "px";
+
+        body_height = body_height + 200;
+        document.getElementById("body").style.height = body_height.toString()  + "px";
+
+
 
         if (d.changeDay != false) {
 
@@ -57,6 +70,8 @@ var margin = {
 
 var i = 0,
     body_top = 0,
+    body_width = screen.width,
+    body_height = screen.height,
     duration = 1500,
     rectW = 90,
     rectH = 25;
@@ -69,7 +84,8 @@ var diagonal = d3.svg.diagonal()
     });
 
 console.log(screen.width, screen.height)
-var svg = d3.select("#body").append("svg").attr("width", 2000).attr("height", 7000)
+var svg = d3.select("#body").classed("svg-container", true).append("svg")
+.classed("svg-content-responsive", true).attr("width", 7000).attr("height", 7000)
     .call(zm = d3.behavior.zoom().scaleExtent([1, 3]).on("zoom", null)).append("g")
     .attr("transform", "translate(" + screen.width / 2.5 + "," + screen.height / 7 + ")scale(2.5,2.5)");
 
@@ -123,7 +139,6 @@ function update(source) {
   
     nodeEnter.append("rect")
         .attr("class", "title")
-  
         .attr("width", rectW*1.5)
       //   .attr("height", "25px")
         .attr("rx", 6)
@@ -327,5 +342,24 @@ function redraw() {
     //console.log("here", d3.event.translate, d3.event.scale);
     svg.attr("transform",
         "translate(" + d3.event.translate + ")"
-        + " scale(" + d3.event.scale + ")");
+        + " scale(" + d3.event.scale + ")").attr("width",100+"%");
+}
+
+
+function move(length, index){
+    if(length == 2){
+        if(index == 0){
+            return 220
+        }else{
+            return -200
+        }
+    }else if(length == 3){
+        if(index == 0){
+            return 500
+        }else if(index == 2){
+            return -500
+        }else{
+            return 0
+        }
+    }
 }
