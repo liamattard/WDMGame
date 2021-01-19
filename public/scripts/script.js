@@ -109,7 +109,7 @@ class CurrentPlayer{
 }
 
 var line=0;
-
+var audio;
 let currentPlayer = new CurrentPlayer();
 
 
@@ -129,6 +129,9 @@ function startStory() {
     setTimeout(function(){currentPlayer.calculate_health(0, "+"); },2000);
     setTimeout(function(){currentPlayer.calculate_happiness(0, "+"); },2000);
     
+
+    audio = new Audio('assets/audio.mp3');
+    audio.play();
 
     setTimeout(runStory, 1000);
 
@@ -176,7 +179,7 @@ function runStory(){
             
             removeIntro();
         }                   
-      }, 500)
+      }, 5000)
 }
 
 
@@ -184,6 +187,7 @@ function removeIntro(){
 
     // TODO:Add audio lowered down
 
+    audio.volume = 0.1;
 
     document.getElementById("body").style.display = "block";
     document.getElementById("body").classList.add("fadeIn");
@@ -191,8 +195,6 @@ function removeIntro(){
 
     // Hide intro
     document.getElementById("intro").style.display = "none";
-
-
 
     
     // Show Balance Meter
@@ -215,19 +217,7 @@ function removeIntro(){
     document.getElementById("current_day").classList.remove("no_opacity");
     document.getElementById("current_day").classList.add("fadeIn");
 
-    
-//     setTimeout(function(){ currentPlayer.calculate_happiness(20, "-");console.log(currentPlayer.happiness)
-
-
-
-//     setTimeout(function(){ currentPlayer.calculate_happiness(20, "-");console.log(currentPlayer.happiness) 
-//     setTimeout(function(){ currentPlayer.calculate_happiness(20, "-");console.log(currentPlayer.happiness) 
-//     setTimeout(function(){ currentPlayer.calculate_happiness(20, "-");console.log(currentPlayer.happiness) 
-//     setTimeout(function(){ currentPlayer.calculate_happiness(-60, "-");console.log(currentPlayer.happiness) },2000);},2000);},2000);},2000);
-
-// },2000);
-
-
+    setTimeout(function(){audio.pause()},1000);
 }
 
 

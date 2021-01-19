@@ -4,21 +4,23 @@ function click(d) {
     if (!d.children) {
 
         // Animation
-        body_top = body_top - screen.height / 2.2;
+        body_top = body_top - screen.height / 2.5;
         var shift_value = body_top.toString();
         document.getElementById("body").style.top = shift_value + "px";
         document.getElementById("body").style.height = shift_value + "px";
 
-        var shift_hor = move((d.parent.children).length, (d.parent.children).indexOf(d));
-        console.log("din", Math.abs(shift_hor))
+        shift_hor = shift_hor + move((d.parent.children).length, (d.parent.children).indexOf(d));
+        console.log("din", shift_hor,move((d.parent.children).length, (d.parent.children).indexOf(d)))
         document.getElementById("body").style.left = shift_hor.toString() + "px";
 
 
-        body_width = body_width + 200;
-        document.getElementById("body").style.width = body_width.toString() + "px";
+        // body_width = body_width + 200;
+        // document.getElementById("body").style.width = body_width.toString() + "px";
 
         body_height = body_height + 200;
-        document.getElementById("body").style.height = body_height.toString() + "px";
+        console.log(body_height)
+        // document.getElementById("body").style.height = body_height.toString() + "px";
+        // document.getElementById("graph").setAttribute("height", body_height.toString());
 
 
 
@@ -48,8 +50,9 @@ function click(d) {
             console.log("hello");
         }
 
-        // audio_btn.play();
-        // audio_move.play();
+
+        audio_btn.play();
+        audio_move.play();
 
         d.children = d._children;
         d._children = null;
@@ -70,11 +73,18 @@ var margin = {
 
 var i = 0,
     body_top = 0,
+    shift_hor = 0,
     body_width = screen.width,
     body_height = screen.height,
     duration = 1500,
     rectW = 90,
     rectH = 25;
+
+    
+var audio_btn = new Audio('assets/button.mp3');
+var audio_move = new Audio('assets/move.mp3');
+
+
 
 
 var tree = d3.layout.tree().nodeSize([190, 10]);
@@ -84,8 +94,7 @@ var diagonal = d3.svg.diagonal()
     });
 
 console.log(screen.width, screen.height)
-var svg = d3.select("#body").classed("svg-container", true).append("svg")
-    .classed("svg-content-responsive", true).attr("width", 7000).attr("height", 7000)
+var svg = d3.select("#body").append("svg").attr("id", "graph").attr("align","center").attr("width", 7000).attr("height", 7000)
     .call(zm = d3.behavior.zoom().scaleExtent([1, 3]).on("zoom", null)).append("g")
     .attr("transform", "translate(" + screen.width / 2.5 + "," + screen.height / 7 + ")scale(2.5,2.5)");
 
@@ -338,8 +347,6 @@ function update(source) {
     });
 }
 
-var audio_btn = new Audio('button.mp3');
-var audio_move = new Audio('move.mp3');
 
 //Redraw for zoom
 function redraw() {

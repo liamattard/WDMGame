@@ -187,10 +187,10 @@ html, body {
 svg {
     margin: auto;
     display: block;
-    width: auto!important;
+    /* width: auto!important;
     max-width: 100%!important;
     height: auto!important;
-    max-height: 100%!important;
+    max-height: 100%!important; */
 }
 
 .svg-container {
@@ -208,7 +208,7 @@ svg {
     left: 0;
   }
 
-  
+
 .node text {
     font-size: 9px;
 }
