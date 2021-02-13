@@ -8,15 +8,15 @@ function click(d) {
   if (!d.children) {
 
     // Scroll Animation
-    
+
 
     if (scale>2){
       constant = 1370
     }else{
       constant = 905
     }
+    console.log(constant)
     body_top = body_top - screen.height / (screen.width/constant);
-
     var shift_value = body_top.toString();
     document.getElementById("body").style.top = shift_value + "px";
     document.getElementById("body").style.height = shift_value + "px";
@@ -117,7 +117,7 @@ console.log(screen.width, screen.height);
 
 svg_width = 30000;
 
-
+console.log(scale)
 var svg = d3
   .select("#body")
   .append("svg")
@@ -189,8 +189,7 @@ function update(source) {
     // .attr("stroke-width", 1)
     .style("fill", "#ffff");
 
-
-    nodeEnter
+  nodeEnter
     .append("rect")
     .attr("width", function (d) {
       if (d.isParent == "1") {
@@ -268,9 +267,9 @@ function update(source) {
     .text(function (d) {
 
       values = chooseColour(d.Health);
-      d.Health = values[0];
+      d.health = values[0];
 
-      console.log("COLOR OF: " + d.Health + " = " + color)
+      console.log("COLOR OF: " + d.health + " = " + color)
 
       return d.Health;
     })
@@ -281,8 +280,6 @@ function update(source) {
       return color;
 
     });
-
-  var x = true;
 
 
   nodeEnter
@@ -308,21 +305,18 @@ function update(source) {
     .attr("dy", ".35em")
     .attr("text-anchor", "middle")
     .text(function (d) {
-
       values = chooseColour(d.Happiness);
       d.Happiness = values[0];
       return d.Happiness;
     })
     .attr("fill", function(d){
-
       values = chooseColour(d.Happiness);
       color = values[1];
       return color;
-
     });
 
 
-    nodeEnter
+  nodeEnter
     .append("text")
     .attr("class", "attributes")
     .attr("x", rectW / 2.3)
@@ -345,7 +339,6 @@ function update(source) {
     .attr("dy", ".35em")
     .attr("text-anchor", "middle")
     .text(function (d) {
-
       values = chooseColour(d.Money);
       console.log("VALUES: "+ values);
       d.Money = values[0];
@@ -353,7 +346,6 @@ function update(source) {
       return d.Money;
     })
     .attr("fill", function(d){
-
       values = chooseColour(d.Money);
       color = values[1];
       return color;
@@ -372,7 +364,6 @@ function update(source) {
     .select("rect")
     .attr("width", rectW)
     .attr("height", rectH)
-
     .attr("rx", 6)
     .attr("ry", 6)
     // .attr("stroke", "gray")
@@ -512,3 +503,41 @@ function chooseColour(string) {
   return [quantity, color];
 
 }
+
+
+// function wrap(text, width){
+//     words = text.split(" ")
+//     if( words.length > 3){
+//       split = words.length/2
+//       index = Math.ceil(split)
+
+//       words.splice(index+1, index, '\n');
+      
+//       text = words.join(' ')
+//     }
+//     return text
+// }
+
+// function wrap(text, width) {
+//   text.for(function() {
+//     var text = d3.select(this),
+//         words = text.text().split(/\s+/).reverse(),
+//         word,
+//         line = [],
+//         lineNumber = 0,
+//         lineHeight = 1.1, // ems
+//         y = text.attr("y"),
+//         dy = parseFloat(text.attr("dy")),
+//         tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em");
+//     while (word = words.pop()) {
+//       line.push(word);
+//       tspan.text(line.join(" "));
+//       if (tspan.node().getComputedTextLength() > width) {
+//         line.pop();
+//         tspan.text(line.join(" "));
+//         line = [word];
+//         tspan = text.append("tspan").attr("x", 0).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
+//       }
+//     }
+//   });
+// }

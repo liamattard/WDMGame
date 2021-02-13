@@ -32,6 +32,9 @@ class CurrentPlayer{
 
     calculate_health(value, op){
 
+        console.log("VALUE "+value);
+        console.log("OP "+op);
+
         var current_health= this.health;
 
         if(op=="-"){
@@ -39,6 +42,11 @@ class CurrentPlayer{
         }
         if(op=="+"){
             this.health = this.health+value;
+        }
+
+        if(this.health> 100){
+            this.health = 100;
+
         }
 
         // document.getElementById("health_score").innerHTML = this.health;
@@ -62,7 +70,11 @@ class CurrentPlayer{
             this.happiness= this.happiness-value;
         }
         else if(op == "+"){
-            this.health = this.happiness+value;
+            this.happiness= this.happiness+value;
+        }
+
+        if (this.happiness>100){
+            this.happiness = 100;
         }
 
         document.getElementById("happiness_label").innerHTML = this.happiness;
@@ -92,15 +104,96 @@ class CurrentPlayer{
 
     nextday(d){
 
-        if(this.job == 1){
 
-            currentPlayer.calculate_money(20,"+");
-
-        }
 
         document.getElementById("day_"+ this.date.toString()).classList.remove("active");
 
         this.date++;
+
+        var change_health_value = d.Health.slice(1);
+        var change_health_symbol = d.Health.charAt(0);
+
+        console.log("HEALTH VALUE "+ d.Health);
+        console.log("HEALTH VV"+ change_health_value);
+        console.log("HEALTH VVV"+ change_health_symbol);
+        if(change_health_value!= "0"){
+            currentPlayer.calculate_health(parseInt(change_health_value) , change_health_symbol);
+
+        }
+
+
+        var change_money_value = d.Money.slice(1);
+        var change_money_symbol = d.Money.charAt(0);
+        console.log("Money VALUE "+ change_money_value);
+        if(change_money_value != "0"){
+
+            currentPlayer.calculate_money(parseInt(change_money_value), change_money_symbol);
+
+        }
+
+        var change_happiness_value = d.Happiness.slice(1);
+        var change_happiness_symbol = d.Happiness.charAt(0);
+        console.log("Happiness VALUE "+ change_happiness_value);
+        if(change_happiness_value != "0"){
+
+            currentPlayer.calculate_happiness(parseInt(change_happiness_value), change_happiness_symbol);
+
+        }
+
+
+
+        if((this.date-1) %6 === 0){ 
+
+            if (this.job == 1){
+
+                currentPlayer.calculate_money(70,"+");
+                currentPlayer.calculate_happiness(10,"+");
+
+            } else if (this.job == 2){
+
+                currentPlayer.calculate_money(140,"+");
+
+            } else if(this.job == 3){
+
+                currentPlayer.calculate_money(200,"+");
+                currentPlayer.calculate_happiness(10,"-");
+
+            }
+
+            if (this.house == 1){
+
+                currentPlayer.calculate_money(35,"-");
+                currentPlayer.calculate_happiness(5,"-");
+                
+
+            }
+            else if (this.house == 2){
+
+                currentPlayer.calculate_money(60,"-");
+                
+
+            } else if (this.house == 3){
+
+                currentPlayer.calculate_money(100,"-");
+                currentPlayer.calculate_happiness(10,"-");
+
+            }
+
+            if (this.transportation == 1){
+
+                currentPlayer.calculate_happiness(20,"+");
+                currentPlayer.calculate_money(100,"-");
+
+            } else if (this.transportation == 2){
+
+                currentPlayer.calculate_happiness(10,"-");
+                currentPlayer.calculate_money(35,"-");
+
+            }
+
+
+
+        }
         
         document.getElementById("date").innerHTML = this.date.toString();
 
