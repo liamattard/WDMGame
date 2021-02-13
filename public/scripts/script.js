@@ -90,7 +90,7 @@ class CurrentPlayer{
     }
 
 
-    nextday(){
+    nextday(d){
 
         if(this.job == 1){
 
@@ -145,10 +145,19 @@ function setDays(){
 
     for (let i = 1; i < 31; i++){
 
+
         let span = document.createElement('span'); 
         span.classList.add('day');
         span.id = 'day_' +i;
         span.innerText = i;
+
+        if (i % 7=== 0){
+
+            span.innerText = "PAYDAY";
+            span.style.color = "rgb(120,120,120)";
+            span.style.fontWeight = "900";
+
+        }
 
         if(i==1){
 

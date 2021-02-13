@@ -93,7 +93,7 @@ function generateJobs(){
     HeadWaiter["children"] = [];
     HeadWaiter["description"] = "Managing the whole restaurant."
     HeadWaiter["Happiness"] = "+0";
-    HeadWaiter["Money"] = "+140/ 7 days";
+    HeadWaiter["Money"] = "140/ 7 days";
     HeadWaiter["Health"] = "+0";
     HeadWaiter["noValues"] = true;
     HeadWaiter.changeDay = false;

@@ -7,18 +7,13 @@ function click(d) {
 
     // Scroll Animation
 
-    body_top = body_top - screen.height / 1.2;
+    body_top = body_top - screen.height / 1.42;
     var shift_value = body_top.toString();
     document.getElementById("body").style.top = shift_value + "px";
     document.getElementById("body").style.height = shift_value + "px";
 
     shift_hor =
       shift_hor + move(d.parent.children.length, d.parent.children.indexOf(d));
-    console.log(
-      "din",
-      shift_hor,
-      move(d.parent.children.length, d.parent.children.indexOf(d))
-    );
     document.getElementById("body").style.left = shift_hor.toString() + "px";
 
 
@@ -29,7 +24,7 @@ function click(d) {
     // Game Logic
 
     if (d.changeDay != false) {
-      currentPlayer.nextday();
+      currentPlayer.nextday(d);
     }
 
     var jobs = ["Nursery Teacher", "Head Waiter", "Boring Office Job"].indexOf(
@@ -49,7 +44,7 @@ function click(d) {
 
       generateHouses(d);
 
-    }  
+    }
     // House Selection
     else if (apartment != -1) {
 
@@ -57,7 +52,7 @@ function click(d) {
       currentPlayer.house = apartment + 1;
       carOrBus(d);
 
-    } 
+    }
     // Transportation Selection
     else if (transportation != -1) {
 
@@ -110,23 +105,24 @@ var diagonal = d3.svg.diagonal().projection(function (d) {
 });
 
 console.log(screen.width, screen.height);
+
+var scale = screen.width/900;
+svg_width = 30000;
+
+
 var svg = d3
   .select("#body")
   .append("svg")
   .attr("id", "graph")
   .attr("align", "center")
-  .attr("width", 7000)
-  .attr("height", 7000)
+  .attr("width", svg_width)
+  .attr("height",30000)
   .call((zm = d3.behavior.zoom().scaleExtent([1, 3]).on("zoom", null)))
   .append("g")
-  .attr(
-    "transform",
-    "translate(" +
-    screen.width / 2.5 +
-    "," +
-    screen.height / 7 +
-    ")scale(2.5,2.5)"
-  );
+  .attr("transform","translate(" + svg_width/1.89 +"," +screen.height / 7 +")scale("+scale+","+scale+")");
+
+document.getElementById("graph").style.left = -(svg_width/2)
+
 
 //necessary so that zoom 9nows where to zoom and unzoom from
 zm.translate([350, 20]).scale(2.5);
@@ -148,6 +144,8 @@ update(root);
 d3.select("#body").style("height", screen.height);
 
 function update(source) {
+
+
   // Compute the new tree layout.
   var nodes = tree.nodes(root).reverse(),
     links = tree.links(nodes);
@@ -216,6 +214,8 @@ function update(source) {
       return d.description;
     });
 
+  color = null;
+
   nodeEnter
     .append("text")
     .attr("class", "attributes")
@@ -232,10 +232,22 @@ function update(source) {
     .attr("x", -rectW / 3)
     .attr("y", rectH * 2.8)
     .attr("dy", ".35em")
-    .attr("fill", " rgb(100, 195, 50)")
     .attr("text-anchor", "middle")
     .text(function (d) {
+
+      values = chooseColour(d.Health);
+      d.health = values[0];
+
+      console.log("COLOR OF: " + d.health + " = " + color)
+
       return d.Health;
+    })
+    .attr("fill", function(d){
+
+      values = chooseColour(d.Health);
+      color = values[1];
+      return color;
+
     });
 
   var x = true;
@@ -259,10 +271,19 @@ function update(source) {
     .attr("x", "105px")
     .attr("y", rectH * 2.8)
     .attr("dy", ".35em")
-    .attr("fill", " rgb(131, 25, 25)")
     .attr("text-anchor", "middle")
     .text(function (d) {
+
+      values = chooseColour(d.Happiness);
+      d.Happiness = values[0];
       return d.Happiness;
+    })
+    .attr("fill", function(d){
+
+      values = chooseColour(d.Happiness);
+      color = values[1];
+      return color;
+
     });
 
   nodeEnter
@@ -276,6 +297,7 @@ function update(source) {
       return "Money";
     });
 
+
   nodeEnter
     .append("text")
     .attr("class", "attribute_values")
@@ -283,9 +305,20 @@ function update(source) {
     .attr("y", rectH * 2.8)
     .attr("dy", ".35em")
     .attr("text-anchor", "middle")
-    .attr("fill", "rgb(100, 195, 50)")
     .text(function (d) {
+
+      values = chooseColour(d.Money);
+      console.log("VALUES: "+ values);
+      d.Money = values[0];
+      color = values[1];
       return d.Money;
+    })
+    .attr("fill", function(d){
+
+      values = chooseColour(d.Money);
+      color = values[1];
+      return color;
+
     });
 
   // Transition nodes to their new position.
@@ -396,18 +429,47 @@ function redraw() {
 function move(length, index) {
   if (length == 2) {
     if (index == 0) {
-      return 220;
+      return screen.width/9.3;
     } else {
-      return -200;
+      return -(screen.width/9.75);
     }
   } else if (length == 3) {
     if (index == 0) {
-      return 500;
+      return screen.width/5;
     } else if (index == 2) {
-      return -500;
+      return -(screen.width/5.7);
     } else {
       return 0;
     }
   }
 }
 
+function chooseColour(string) {
+
+
+  quantity = string;
+  if (quantity != null) {
+
+    if (quantity.charAt(0) == '-') {
+
+
+      color = "rgb(100, 0, 50)";
+
+    }
+    else {
+
+      if (quantity.charAt(0) != '+') {
+
+        quantity = '+' + quantity;
+
+      }
+
+      color = "rgb(100, 195, 50)";
+
+    }
+
+  }
+
+  return [quantity, color];
+
+}

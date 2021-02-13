@@ -17,6 +17,10 @@ html, body {
     transition: all 1s ease;
 }
 
+#graph{
+    position: absolute!important;
+}
+
 #intro {
     width: 40%;
     padding: 10px;
