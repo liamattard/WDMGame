@@ -279,22 +279,22 @@ function generateEvents(root){
 
     }
 
-    if(currentPlayer.happiness < 25){
+    // if(currentPlayer.happiness < 25){
 
-      shuffleArray(lowHappiness);
-      root._children.push(lowHappiness[0]);
+    //   shuffleArray(lowHappiness);
+    //   root._children.push(lowHappiness[0]);
 
-    } else if (currentPlayer.health < 25){
+    // } else if (currentPlayer.health < 25){
 
-      shuffleArray(lowHealth);
-      root._children.push(lowHealth[0]);
+    //   shuffleArray(lowHealth);
+    //   root._children.push(lowHealth[0]);
 
-    } else {
+    // } else {
 
       root._children.push(eventsList[0]);
       eventsList.shift();
 
-    }
+    // }
 
 
 
