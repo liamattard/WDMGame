@@ -61,7 +61,7 @@ function readTextFile(file) {
                 parent_object["children"].push(child_object);
               }
             }
-            if(type == 1){
+            if(type == 0){
               normalEvents.push(parent_object);
             } else if (type == 2){
               restaurantEvents.push(parent_object);
@@ -275,8 +275,6 @@ function generateEvents(root){
 
       }
 
-      console.log("EvENTS: " + eventsList);
-
       shuffleArray(eventsList);
 
     }
@@ -294,12 +292,12 @@ function generateEvents(root){
     } else {
 
       root._children.push(eventsList[0]);
+      eventsList.shift();
 
     }
 
 
 
-    eventsList.shift();
 
     return root;
 
