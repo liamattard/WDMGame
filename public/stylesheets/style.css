@@ -4,6 +4,7 @@ html, body {
     height: 100%;
     font-family: 'Oldenburg', cursive!important;
     background: rgba(26, 33, 38, 1);
+    overflow: hidden;
     /* background: linear-gradient(17deg, rgba(40,53,62,1) 0%, rgba(26,33,38,1) 48%); */
 }
 
@@ -15,7 +16,6 @@ html, body {
     top: 0px;
     left: 0px;
     transition: all 1s ease;
-    overflow: hidden;
 
 }
 

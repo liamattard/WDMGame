@@ -30,7 +30,7 @@ function readTextFile(file) {
           var parent_status = properties[4];
 
           // If property is a parent
-          if (parent_status == 0) {
+          if (parent_status == 1) {
 
 
             parent_object = new Object();

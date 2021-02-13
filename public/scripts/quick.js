@@ -1,14 +1,13 @@
+
 var root = generateJobs();
+
 var scale = screen.width/900;
-
-
 
 function click(d) {
 
   if (!d.children) {
 
     // Scroll Animation
-
 
     if (scale>2){
       constant = 1370
