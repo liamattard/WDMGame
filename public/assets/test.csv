@@ -1,0 +1,109 @@
+ID,Type,Title,Description,Parent,Price,Health,Happiness
+0,1,You’re at the beach,your friend suggests buying an ice cream,1,None,None,None
+0,1,Buy One,None,0,-10,-20,20
+0,1,Opt Out,None,0,0,0,-10
+1,1,You’re not feeling fit,Your friend asks if you want to join a gym with them.,1,None,None,None
+1,1,Join,None,0,-25,20,10
+1,1,Opt Out,Remember your Health!,0,0,-20,-10
+2,0,Your fridge is empty,None,1,None,None,None
+2,0,Buy groceries for a week,None,0,-12,10,0
+2,0,Buy takeout for today,Remember your Health!,0,-10,-10,20
+3,0,There’s a new lottery.,None,1,None,None,None
+3,0,Buy a Ticket,None,0,-10,0,0
+3,0,Opt Out,None,0,0,0,-10
+4,0,Your electricity and water bill comes in,None,1,None,None,None
+4,0,Pay,None,0,-100,0,-10
+4,0,Don't Pay,None,0,0,0,-30
+5,0,You're feeling hungry from work,None,1,None,None,None
+5,0,Buy a salad,None,0,-6,10,0
+5,0,Buy a Euro Burger from McDaniels,Remember your Health!,0,-1,-10,10
+6,0,The new wireless PearPods come out.,None,1,None,None,None
+6,0,Buy them,None,0,-75,0,20
+6,0,Opt out,None,0,0,0,-10
+7,0,L-Istrina is going on,None,1,None,None,None
+7,0,Donate 10,None,0,-10,0,20
+7,0,Opt Out,None,0,0,0,0
+8,0,You see an advert on Facebook for a day trip to Sicily.,None,1,None,None,None
+8,0,Go to Sicily,None,0,-100,0,30
+8,0,Opt out,None,0,0,0,-20
+9,2,Your Kid has a piano recital but you have been given the chance to work overtime,None,1,None,None,None
+9,2,Work Overtime,None,0,50,0,-20
+9,2,Go to recital,None,0,0,0,20
+10,0,Your dog swallows some chocolate,None,1,None,None,None
+10,0,Take him to the vet,None,0,-100,0,0
+10,0,Don't take him,None,0,0,0,-30
+11,0,The internet rates are going up but your kids need it for school work,None,1,None,None,None
+11,0,Continue Paying Bill,None,0,-40,0,0
+11,0,Disconnect Service,None,0,0,0,-20
+12,0,"At the grocery store, your child notices a lollipop",None,1,None,None,None
+12,0,Buy it,None,0,-5,0,10
+12,0,Don't buy it,None,0,0,0,-10
+13,0,You Dropped Your Phone & The Screen Cracked,None,1,None,None,None
+13,0,Repair It,None,0,-50,0,0
+13,0,Don't Repair,None,0,0,0,-20
+14,0,A video game you were looking forward to has just been released,None,1,None,None,None
+14,0,Buy it,None,0,-60,0,20
+14,0,Don't Buy it,None,0,0,0,-10
+15,0,You wake up to find your bedroom window broken,None,1,None,None,None
+15,0,Fix it,None,0,-50,0,0
+15,0,Don't Fix it,You might catch a cold!,0,0,-20,0
+16,5,Your co-worker notices you look a bit down and they offer you a cigarette.,None,1,None,None,None
+16,5,Take it,None,0,0,-30,20
+16,5,Opt out,None,0,0,None,-10
+17,5,Your friend asks you to go out for dinner to get some stuff off your chest.,None,1,None,None,None
+17,5,Go Out,None,0,-30,0,20
+17,5,Stay Home,You might feel sad!,0,0,0,-10
+18,5,"You have recently been diagnosed with depression, the medication costs 35 euro per month",None,1,None,None,None
+18,5,Buy,None,0,-35,10,20
+18,5,Don't Buy,None,0,0,0,-10
+19,4,Your Mum tells you you’re looking unhealthy.,None,1,None,None,None
+19,4,Go to a Nutrionist,None,0,-30,20,10
+19,4,Refuse to Go,Your Health is Important!,0,0,-20,-10
+20,4,You start feeling some pains and aches,None,1,None,None,None
+20,4,Take sick leave from work and go to the doctor,None,0,30,20,10
+20,4,Ignore,None,0,0,-10,-10
+21,4,"While on a routine checkup, your doctor recommends that you get some blood tests done, but it’s not covered by insurance",None,1,None,None,None
+21,4,Get tested,None,0,-100,20,10
+21,4,Don't test,None,0,0,-10,-10
+22,2,It’s the holiday season and the restaurant is extra busy,None,1,None,None,None
+22,2,Work extra hours but miss out on family and friend events,None,0,75,0,-10
+22,2,Keep working your usual hours,None,0,0,0,10
+23,2,Your co-worker asks if you want to steal and drink some alcohol from the restaurant with them,None,1,None,None,None
+23,2,Join your co-worker,Remember your Job is Important,0,0,-30,10
+23,2,Refuse,None,0,0,0,0
+24,2,The staff at the restaurant are going to Paceville after the shift is over.,None,1,None,None,None
+24,2,Join,None,0,-25,-10,20
+24,2,Go Home,None,0,0,0,-10
+25,3,Your boss asks you to work overtime and stay at the office overnight to finish your work.,None,1,None,None,None
+25,3,Work overnight,None,0,100,-10,-10
+25,3,Tell your boss that you’ll finish the work some other time,None,0,0,0,0
+26,3,Your co-worker asks if you want to take an extra long lunch break and miss the rest of the workday with them,None,1,None,None,None
+26,3,Join,None,0,0,0,20
+26,3,Opt out,None,0,0,0,0
+27,3,Your colleagues are organising Secret Santa.,None,1,None,None,None
+27,3,Join them,None,0,-25,0,10
+27,3,Opt out,You might save money but remembber your happiness,0,0,0,-20
+28,1,The parents of one of your students ask you if you’d like to babysit over the weekend.,None,1,None,None,None
+28,1,Babysit,None,0,50,0,0
+28,1,Decline,None,0,0,0,0
+29,1,You wake up but you don’t feel like going to work.,None,1,None,None,None
+29,1,Lie and Call in Sick,None,0,0,0,10
+29,1,Go to work anyway,None,0,0,0,-10
+30,1,The other teachers in your nursery are giving Christmas presents to their students,None,1,None,None,None
+30,1,Give Presents,None,0,-30,0,10
+30,1,Opt out,None,0,0,0,-20
+31,0,"While on your way to work, you notice that the check engine light is on, however you only have enough money to either get it fixed or get groceries.",None,1,None,None,None
+31,0,Fix your car,None,0,-50,0,0
+31,0,Leave it,You might save money however you will miss your car,0,0,0,-20
+32,0,"While on your way to an important meeting, your car breaks down.",None,1,None,None,None
+32,0,Walk it,None,0,0,0,-20
+32,0,Get a Taxi,None,0,-20,0,0
+33,0,Your car needs Fuel,None,1,None,None,None
+33,0,Buy Fuel,None,0,-80,0,0
+33,0,Take the bus,You might save money however you will miss your car,0,0,0,-20
+34,0,You were in a car accident you insurance is covering 50% of the repair cost,None,1,None,None,None
+34,0,Pay the rest,None,0,-100,-20,-10
+34,0,Use the bus,You might save money however you will miss your car,0,0,-20,-20
+35,0,You Car Insurance is due,None,1,None,None,None
+35,0,Pay it,None,0,-200,0,0
+35,0,Top up your Tal-Linja Card,None,0,-50,0,-20

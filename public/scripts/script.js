@@ -8,6 +8,7 @@ class CurrentPlayer{
         this.happiness = 100;
         this.job = 0;
         this.house = 0;
+        this.transportation = 0;
 
 
     }
@@ -173,13 +174,13 @@ function runStory(){
         document.getElementById(story).classList.add("text_anim");
 
         line++;                   
-        if (line < 6) {            
+        if (line < 1) {            
             runStory();              
         }else{
             
             removeIntro();
         }                   
-      }, 5000)
+      }, 1000)
 }
 
 

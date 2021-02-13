@@ -1,4 +1,74 @@
 
+var normalEvents = Array();
+
+
+// O(N^2) algorithm imma fuck it mghandix aptit nahseb :)
+function readTextFile(file) {
+  var rawFile = new XMLHttpRequest();
+
+  rawFile.open("GET", file, false);
+  rawFile.onreadystatechange = function () {
+
+    if (rawFile.readyState === 4) {
+
+      if (rawFile.status === 200 || rawFile.status == 0) {
+
+        // Getting all text from file
+        var allText = rawFile.responseText;
+        var parents_objects = allText.split("\n");
+
+        for (var i in parents_objects) {
+
+          var properties = parents_objects[i].split(",");
+          var parent_id = properties[0];
+          var parent_status = properties[4];
+
+          // If property is a parent
+          if (parent_status == 1) {
+
+
+            parent_object = new Object();
+            parent_object["name"] = properties[2];
+            parent_object["description"] = properties[3];
+            parent_object["children"] = Array();
+
+
+            for (var j in parents_objects) {
+
+              var child_properties = parents_objects[j].split(",");
+              var child_id = child_properties[0];
+              var child_status = child_properties[4];
+
+              if (child_id == parent_id && child_status == 0) {
+
+                child_object = new Object();
+                child_object["name"] = child_properties[2];
+                child_object["description"] = child_properties[3];
+                child_object["Money"] = child_properties[5]; 
+                child_object["Health"] = child_properties[6]; 
+                child_object["Happiness"] = child_properties[7]; 
+                child_object.changeDay = true;
+                parent_object["children"].push(child_object);
+
+               
+
+              }
+            }
+
+            normalEvents.push(parent_object);
+          }
+        }
+      }
+    }
+  }
+  rawFile.send(null);
+}
+
+console.log(normalEvents)
+
+readTextFile("assets/test.csv");
+
+
 function generateJobs(){
 
     var root = new Object();
@@ -98,13 +168,8 @@ function generateHouses(root){
     option.children.push(Small);
     option.children.push(Nice);
 
-    body_top = body_top - screen.height / 2.2;
-    var shift_value = body_top.toString();
-    document.getElementById("body").style.top = shift_value + "px";
-    document.getElementById("body").style.height = shift_value + "px";
     return root;
 }
-
 
 function carOrBus(root){
 
@@ -138,9 +203,28 @@ function carOrBus(root){
     option.children.push(Car);
     option.children.push(Bus);
 
-    body_top = body_top - screen.height / 2.2;
-    var shift_value = body_top.toString();
-    document.getElementById("body").style.top = shift_value + "px";
-    document.getElementById("body").style.height = shift_value + "px";
     return root;
+}
+
+function shuffleArray(array) {
+  for (var i = array.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
+  }
+}
+
+function generateEvents(root){
+
+    console.log(root);
+    shuffleArray(normalEvents)
+
+    root._children.push(normalEvents[0]);
+
+    normalEvents.shift();
+
+
+    return root;
+
 }
