@@ -314,7 +314,8 @@ function runStory(){
             
             removeIntro();
         }                   
-      }, 1000)
+      }, 500)
+    //   results()
 }
 
 
@@ -356,9 +357,33 @@ function removeIntro(){
 }
 
 
-/**
- *  Animate Numbers going up or down
- * */ 
+function results(){
+
+    document.getElementById("balance").style.textAlign = "center";
+    document.getElementById("balance").style.top = 15 + "%";
+    document.getElementById("balance").style.left = 45 + "%";
+    document.getElementById("balance").style.transform = "translate(-50%,-50%)";
+    document.getElementById("balance").style.transform = "scale(1.5)";
+
+
+    document.getElementById("progress_bar").style.top = 80 + "%";
+    document.getElementById("progress_bar").style.left = 40 + "%";
+
+
+    elements = [["cube_scene", 77, 40], ["current_day", 45, 40]]
+
+    for (i = 0; i < elements.length; i++) {
+
+        document.getElementById(elements[i][0]).style.top = elements[i][1] + "%";
+        document.getElementById(elements[i][0]).style.right = elements[i][2] + "%";
+        document.getElementById(elements[i][0]).style.transform = "translate(-50%,-50%)";
+
+    }
+  
+
+}
+
+
 function animateValue(obj, start, end, duration) {
     let startTimestamp = null;
     const step = (timestamp) => {

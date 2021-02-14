@@ -1,8 +1,6 @@
 var root = generateJobs();
 var scale = screen.width/900;
 
-
-
 function click(d) {
 
   if (!d.children) {
