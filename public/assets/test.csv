@@ -49,7 +49,7 @@ ID,Type,Title,Description,Parent,Price,Health,Happiness
 15,0,Don't Fix,Prepare yourself for a cold night,0,0,-20,0
 16,5,Ciggie for your thoughts?,Your co-worker notices you look a bit down and they offer you a cigarette.,1,None,None,None
 16,5,Take,Take it,0,0,-30,20
-16,5,Don't Take,Opt out,0,0,None,-10
+16,5,Don't Take,Opt out,0,0,0,-10
 17,5,Dinner Time,Your friend asks you to go out for dinner to get some stuff off your chest.,1,None,None,None
 17,5,Go out,Go Out,0,-30,0,20
 17,5,Stay home,Time to eat a tub of Ice Cream while watching re-runs of steinfeld,0,0,0,-10

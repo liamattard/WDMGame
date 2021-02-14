@@ -222,7 +222,7 @@ class CurrentPlayer{
 
         document.getElementById("day_"+ this.date.toString()).classList.add("active");
 
-        if(this.balance <= 0 || this.happiness <= 0 || this.health <=0 ||this.date >= 31){
+        if(this.balance <= 0 || this.happiness <= 0 || this.health <=0 ||this.date >= 30){
 
 
             results();
@@ -308,13 +308,13 @@ function runStory(){
         document.getElementById(story).classList.add("text_anim");
 
         line++;                   
-        if (line < 1) {            
+        if (line < 6) {            
             runStory();              
         }else{
             
             removeIntro();
         }                   
-      }, 1000)
+      }, 5000)
 }
 
 
