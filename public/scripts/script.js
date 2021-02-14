@@ -142,7 +142,30 @@ class CurrentPlayer{
 
 
 
-        if((this.date-1) %6 === 0){ 
+        // console.log(this.date);
+        if((this.date) %7 === 0){ 
+
+
+            let moneyShot = document.getElementsByClassName("moneyShot");
+
+            function timeout (ms) {
+                return new Promise(res => setTimeout(res,ms));
+              }
+
+
+            async function fireEvents () {
+
+                moneyShot[0].style.display = "block";
+                await timeout(3000);
+            }
+
+            fireEvents().then(() =>
+            {
+
+                moneyShot[0].style.display = "none";
+
+            });
+
 
             if (this.job == 1){
 
@@ -198,6 +221,15 @@ class CurrentPlayer{
         document.getElementById("date").innerHTML = this.date.toString();
 
         document.getElementById("day_"+ this.date.toString()).classList.add("active");
+
+        if(this.balance <= 0 || this.happiness <= 0 || this.health <=0 ||this.date >= 31){
+
+
+            results();
+
+        }
+
+        
 
     }
 }
@@ -340,3 +372,31 @@ function animateValue(obj, start, end, duration) {
     window.requestAnimationFrame(step);
 }
 
+
+
+function results(){
+
+    document.getElementById("graph").style.display= "none";
+    document.getElementById("balance").style.textAlign = "center";
+    document.getElementById("balance").style.top = 15 + "%";
+    document.getElementById("balance").style.left = 45 + "%";
+    document.getElementById("balance").style.transform = "translate(-50%,-50%)";
+    document.getElementById("balance").style.transform = "scale(1.5)";
+
+
+    document.getElementById("progress_bar").style.top = 80 + "%";
+    document.getElementById("progress_bar").style.left = 40 + "%";
+
+
+    elements = [["cube_scene", 77, 40], ["current_day", 45, 40]]
+
+    for (i = 0; i < elements.length; i++) {
+
+        document.getElementById(elements[i][0]).style.top = elements[i][1] + "%";
+        document.getElementById(elements[i][0]).style.right = elements[i][2] + "%";
+        document.getElementById(elements[i][0]).style.transform = "translate(-50%,-50%)";
+
+    }
+  
+
+}

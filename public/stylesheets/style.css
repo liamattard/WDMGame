@@ -253,3 +253,17 @@ svg {
 .node title{
     height: 25px!important;
 }
+
+#balance{
+    transition: all 2s ease;
+}
+#cube_scene{
+    transition: all 2s ease;
+
+}
+#current_day{
+    transition: all 2s ease;
+}
+#progress_bar{
+    transition: all 2s ease;
+}

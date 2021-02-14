@@ -1,109 +1,163 @@
 ID,Type,Title,Description,Parent,Price,Health,Happiness
-0,0,your friend suggests buying an ice cream,You’re at the beach,1,None,None,None
-0,0,None,Buy One,0,-10,-20,20
-0,0,None,Opt Out,0,0,0,-10
-1,0,Your friend asks if you want to join a gym with them.,You’re not feeling fit,1,None,None,None
-1,0,None,Join,0,-25,20,10
-1,0,Remember your Health!,Opt Out,0,0,-20,-10
-2,0,None,Your fridge is empty,1,None,None,None
-2,0,None,Buy groceries for a week,0,-12,10,0
-2,0,Remember your Health!,Buy takeout for today,0,-10,-10,20
-3,0,None,There’s a new lottery.,1,None,None,None
-3,0,None,Buy a Ticket,0,-10,0,0
-3,0,None,Opt Out,0,0,0,-10
-4,0,None,Your electricity and water bill comes in,1,None,None,None
-4,0,None,Pay,0,-100,0,-10
-4,0,None,Don't Pay,0,0,0,-30
-5,0,None,You're feeling hungry from work,1,None,None,None
-5,0,None,Buy a salad,0,-6,10,0
-5,0,Remember your Health!,Buy a Euro Burger from McDaniels,0,-1,-10,10
-6,0,None,The new wireless PearPods come out.,1,None,None,None
-6,0,None,Buy them,0,-75,0,20
-6,0,None,Opt out,0,0,0,-10
-7,0,None,L-Istrina is going on,1,None,None,None
-7,0,None,Donate 10,0,-10,0,20
-7,0,None,Opt Out,0,0,0,0
-8,0,None,You see an advert on Facebook for a day trip to Sicily.,1,None,None,None
-8,0,None,Go to Sicily,0,-100,0,30
-8,0,None,Opt out,0,0,0,-20
-9,0,None,Your Kid has a piano recital but you have been given the chance to work overtime,1,None,None,None
-9,0,None,Work Overtime,0,50,0,-20
-9,0,None,Go to recital,0,0,0,20
-10,0,None,Your dog swallows some chocolate,1,None,None,None
-10,0,None,Take him to the vet,0,-100,0,0
-10,0,None,Don't take him,0,0,0,-30
-11,0,None,The internet rates are going up but your kids need it for school work,1,None,None,None
-11,0,None,Continue Paying Bill,0,-40,0,0
-11,0,None,Disconnect Service,0,0,0,-20
-12,0,None,"At the grocery store, your child notices a lollipop",1,None,None,None
-12,0,None,Buy it,0,-5,0,10
-12,0,None,Don't buy it,0,0,0,-10
-13,0,None,You Dropped Your Phone & The Screen Cracked,1,None,None,None
-13,0,None,Repair It,0,-50,0,0
-13,0,None,Don't Repair,0,0,0,-20
-14,0,None,A video game you were looking forward to has just been released,1,None,None,None
-14,0,None,Buy it,0,-60,0,20
-14,0,None,Don't Buy it,0,0,0,-10
-15,0,None,You wake up to find your bedroom window broken,1,None,None,None
-15,0,None,Fix it,0,-50,0,0
-15,0,You might catch a cold!,Don't Fix it,0,0,-20,0
-16,5,None,Your co-worker notices you look a bit down and they offer you a cigarette.,1,None,None,None
-16,5,None,Take it,0,0,-30,20
-16,5,None,Opt out,0,0,None,-10
-17,5,None,Your friend asks you to go out for dinner to get some stuff off your chest.,1,None,None,None
-17,5,None,Go Out,0,-30,0,20
-17,5,You might feel sad!,Stay Home,0,0,0,-10
-18,5,None,"You have recently been diagnosed with depression, the medication costs 35 euro per month",1,None,None,None
-18,5,None,Buy,0,-35,10,20
-18,5,None,Don't Buy,0,0,0,-10
-19,4,None,Your Mum tells you you’re looking unhealthy.,1,None,None,None
-19,4,None,Go to a Nutrionist,0,-30,20,10
-19,4,Your Health is Important!,Refuse to Go,0,0,-20,-10
-20,4,None,You start feeling some pains and aches,1,None,None,None
-20,4,None,Take sick leave from work and go to the doctor,0,-30,20,10
-20,4,None,Ignore,0,0,-10,-10
-21,4,None,"While on a routine checkup, your doctor recommends that you get some blood tests done, but it’s not covered by insurance",1,None,None,None
-21,4,None,Get tested,0,-100,20,10
-21,4,None,Don't test,0,0,-10,-10
-22,2,None,It’s the holiday season and the restaurant is extra busy,1,None,None,None
-22,2,None,Work extra hours but miss out on family and friend events,0,75,0,-10
-22,2,None,Keep working your usual hours,0,0,0,10
-23,2,None,Your co-worker asks if you want to steal and drink some alcohol from the restaurant with them,1,None,None,None
-23,2,Remember your Job is Important,Join your co-worker,0,0,-30,10
-23,2,None,Refuse,0,0,0,0
-24,2,None,The staff at the restaurant are going to Paceville after the shift is over.,1,None,None,None
-24,2,None,Join,0,-25,-10,20
-24,2,None,Go Home,0,0,0,-10
-25,3,None,Your boss asks you to work overtime and stay at the office overnight to finish your work.,1,None,None,None
-25,3,None,Work overnight,0,100,-10,-10
-25,3,None,Tell your boss that you’ll finish the work some other time,0,0,0,0
-26,3,None,Your co-worker asks if you want to take an extra long lunch break and miss the rest of the workday with them,1,None,None,None
-26,3,None,Join,0,0,0,20
-26,3,None,Opt out,0,0,0,0
-27,3,None,Your colleagues are organising Secret Santa.,1,None,None,None
-27,3,None,Join them,0,-25,0,10
-27,3,You might save money but remembber your happiness,Opt out,0,0,0,-20
-28,1,None,The parents of one of your students ask you if you’d like to babysit over the weekend.,1,None,None,None
-28,1,None,Babysit,0,50,0,0
-28,1,None,Decline,0,0,0,0
-29,1,None,You wake up but you don’t feel like going to work.,1,None,None,None
-29,1,None,Lie and Call in Sick,0,0,0,10
-29,1,None,Go to work anyway,0,0,0,-10
-30,1,None,The other teachers in your nursery are giving Christmas presents to their students,1,None,None,None
-30,1,None,Give Presents,0,-30,0,10
-30,1,None,Opt out,0,0,0,-20
-31,0,None,"While on your way to work, you notice that the check engine light is on, however you only have enough money to either get it fixed or get groceries.",1,None,None,None
-31,0,None,Fix your car,0,-50,0,0
-31,0,You might save money however you will miss your car,Leave it,0,0,0,-20
-32,0,None,"While on your way to an important meeting, your car breaks down.",1,None,None,None
-32,0,None,Walk it,0,0,0,-20
-32,0,None,Get a Taxi,0,-20,0,0
-33,0,None,Your car needs Fuel,1,None,None,None
-33,0,None,Buy Fuel,0,-80,0,0
-33,0,You might save money however you will miss your car,Take the bus,0,0,0,-20
-34,0,None,You were in a car accident you insurance is covering 50% of the repair cost,1,None,None,None
-34,0,None,Pay the rest,0,-100,-20,-10
-34,0,You might save money however you will miss your car,Use the bus,0,0,-20,-20
-35,0,None,You Car Insurance is due,1,None,None,None
-35,0,None,Pay it,0,-200,0,0
-35,0,None,Top up your Tal-Linja Card,0,-50,0,-20
+0,0,At The Beach!,your friend suggests buying an ice cream,1,None,None,None
+0,0,Buy,More Ice Cream for three,0,-10,-20,20
+0,0,Ignore,Opt Out,0,0,0,-10
+1,0,Not feeling fit,Your friend asks if you want to join a gym with them.,1,None,None,None
+1,0,Join,Time to hit the gym!,0,-25,20,10
+1,0,Opt Out,Remember to watch out for your health!,0,0,-20,-10
+2,0,Empty Fridge,Your fridge is empty,1,None,None,None
+2,0,Groceries for a week,Buy groceries for a week,0,-12,10,0
+2,0,Takeout Today,Buy takeout for today,0,-10,-10,20
+3,0,Lottery Time,There’s a new lottery.,1,None,None,None
+3,0,Buy a Ticket,Make it Rain,0,-10,0,0
+3,0,Opt out,Opt Out,0,0,0,-10
+4,0,It's that time of the month,Your electricity and water bill comes in,1,None,None,None
+4,0,Pay,Pay the bill,0,-100,0,-10
+4,0,Don't pay,Not paying risks your service being cut off,0,0,0,-30
+5,0,Hungryyy,You're feeling hungry from work,1,None,None,None
+5,0,Salad Time,Buy a salad,0,-6,10,0
+5,0,I'm Lovin It,Buy a Euro Burger from McDaniels,0,-1,-10,10
+6,0,New Product Launch,The new wireless PearPods come out.,1,None,None,None
+6,0,Sweet,Buy them,0,-75,0,20
+6,0,I'm gonna pass,Opt out,0,0,0,-10
+7,0,It's that time of the year,L-Istrina is going on,1,None,None,None
+7,0,I'm feelin' generous,Donate 10,0,-10,0,20
+7,0,Opt out,"I may be feeling generous, but my wallet isn't",0,0,0,0
+8,0,Sicily Time?,You see an advert on Facebook for a day trip to Sicily.,1,None,None,None
+8,0,Sicily Time!,Go to Sicily,0,-100,0,30
+8,0,Opt Out,Homebound,0,0,0,-20
+9,0,Piano Recital,Your Kid has a piano recital but you have been given the chance to work overtime,1,None,None,None
+9,0,Mo' money,Work Overtime,0,50,0,-20
+9,0,Get out the camcorder,Go to recital,0,0,0,20
+10,0,Uh oh,Your dog swallows some chocolate,1,None,None,None
+10,0,Take him,Take him to the vet,0,-100,0,0
+10,0,Sorry Fido,Don't take him,0,0,0,-30
+11,0,To pay or not to pay,The internet rates are going up but your kids need it for school work,1,None,None,None
+11,0,Pay Bill,Continue Paying Bill,0,-40,0,0
+11,0,Don't pay,Disconnect Service,0,0,0,-20
+12,0,Lollipop,"At the grocery store, your child notices a lollipop",1,None,None,None
+12,0,Buy,Buy it,0,-5,0,10
+12,0,Don't Buy,Don't buy it,0,0,0,-10
+13,0,Should've paid more attention,You Dropped Your Phone & The Screen Cracked,1,None,None,None
+13,0,Repair,Repair It,0,-50,0,0
+13,0,Leave As Is,Don't Repair,0,0,0,-20
+14,0,PokeMan 5,A video game you were looking forward to has just been released,1,None,None,None
+14,0,Buy,Buy it,0,-60,0,20
+14,0,Don't Buy,Don't Buy it,0,0,0,-10
+15,0,To Fix or not to fix,You wake up to find your bedroom window broken,1,None,None,None
+15,0,Fix,Fix it,0,-50,0,0
+15,0,Don't Fix,Prepare yourself for a cold night,0,0,-20,0
+16,5,Ciggie for your thoughts?,Your co-worker notices you look a bit down and they offer you a cigarette.,1,None,None,None
+16,5,Take,Take it,0,0,-30,20
+16,5,Don't Take,Opt out,0,0,None,-10
+17,5,Dinner Time,Your friend asks you to go out for dinner to get some stuff off your chest.,1,None,None,None
+17,5,Go out,Go Out,0,-30,0,20
+17,5,Stay home,Time to eat a tub of Ice Cream while watching re-runs of steinfeld,0,0,0,-10
+18,5,Uh oh,"You have recently been diagnosed with depression, the medication costs 35 euro per month",1,None,None,None
+18,5,Buy,Side effects may include weight loss,0,-35,10,20
+18,5,Skip,Don't Buy,0,0,0,-10
+19,4,Thanks Mom,Your Mum tells you you’re looking unhealthy.,1,None,None,None
+19,4,Nutriboost,Go to a Nutrionist,0,-30,20,10
+19,4,Refuse,Skipping mom's advice are we?,0,0,-20,-10
+20,4,Feeling weak ...,You start feeling some pains and aches,1,None,None,None
+20,4,Visit Doctor,Take sick leave from work and go to the doctor,0,-30,20,10
+20,4,Ignore,It might be nothing,0,0,-10,-10
+21,4,Bloodwork,"While on a routine checkup, your doctor recommends that you get some blood tests done, but it’s not covered by insurance",1,None,None,None
+21,4,Get the tests,Get tested,0,-100,20,10
+21,4,Ignore,Don't  test,0,0,-10,-10
+22,2,Happy Holidays!,It’s the holiday season and the restaurant is extra busy,1,None,None,None
+22,2,Work work work,Work extra hours but miss out on friend events,0,75,0,-10
+22,2,Business as usual,Keep working your usual hours,0,0,0,10
+23,2,To Steal or not to steal?,Your co-worker asks if you want to steal and drink some alcohol from the restaurant with them,1,None,None,None
+23,2,Join,Where in the world is Carmen Sandiego?,0,0,-30,10
+23,2,Refuse,Your job is more important,0,0,0,0
+24,2,Taking the edge off,The staff at the restaurant are going to Paceville after the shift is over.,1,None,None,None
+24,2,Let's go already,Join,0,-25,-10,20
+24,2,Nah,Go Home,0,0,0,-10
+25,3,Micromanage much?,Your boss asks you to work overtime and stay at the office overnight to finish your work.,1,None,None,None
+25,3,Workin for the weekend,Work overnight,0,100,-10,-10
+25,3,Footloose,Tell your boss that you’ll finish the work some other time,0,0,0,0
+26,3,Ditch day?,Your co-worker asks if you want to take an extra long lunch break and miss the rest of the workday with them,1,None,None,None
+26,3,Sure,Join,0,0,0,20
+26,3,Nope,Opt out,0,0,0,0
+27,3,Santa Clause,Your colleagues are organising Secret Santa.,1,None,None,None
+27,3,Join,Santa Clause is coming to town,0,-25,0,10
+27,3,Opt Out,Opt out,0,0,0,-20
+28,1,Side gig?,The parents of one of your students ask you if you’d like to babysit over the weekend.,1,None,None,None
+28,1,Sure,Babysit,0,50,0,0
+28,1,"Nah, see you later fam",Decline,0,0,0,0
+29,1,I hate Mondays,You wake up but you don’t feel like going to work.,1,None,None,None
+29,1,Call in Sick,Time to watch a Garfield marathon,0,0,0,10
+29,1,Go anyway,And we soldier on,0,0,0,-10
+30,1,Christmas Time,The other teachers in your nursery are giving Christmas presents to their students,1,None,None,None
+30,1,Give,Feeling Generous,0,-30,0,10
+30,1,Opt Out,But my wallet isn't,0,0,0,-20
+31,6,Check Engine Light,"While on your way to work, you notice that the check engine light is on, however you only have enough money to either get it fixed or get groceries.",1,None,None,None
+31,6,Fix your car,Maybe Sheldon will stop pestering you about the check engine light now,0,-50,0,0
+31,6,Leave it,*knock knock* Penny *knock knock* Penny *knock knock* Penny,0,0,0,-20
+32,6,Living on the edge,"While on your way to an important meeting, your car breaks down.",1,None,None,None
+32,6,Walk it,Walk it,0,0,0,-20
+32,6,Get a taxi,YOLO!,0,-20,0,0
+33,6,Need more fuel,Your car needs Fuel,1,None,None,None
+33,6,Buy,Buy Fuel,0,-80,0,0
+33,6,Take the bus,Time to wear a hazmat suit,0,0,0,-20
+34,6,Car accident,You were in a car accident you insurance is covering 50% of the repair cost,1,None,None,None
+34,6,Pay the rest,People really need to start using the indicators more,0,-100,-20,-10
+34,6,Take the bus,Time to get a Tallinja card,0,0,-20,-20
+35,6,Car Insurance,You Car Insurance is due,1,None,None,None
+35,6,Pay it,"If I paid for these bumpers, I'm gonna use them",0,-200,0,0
+35,6,Bus instead,Top up your Tal-Linja Card,0,-50,0,-20
+36,0,Plumbing Problem,Your bathroom sink started to leak,1,None,None,None
+36,0,Expert help,Call a Plumber to Fix it,0,-30,0,0
+36,0,Leave it,Leave it,0,0,0,-20
+37,0,Laundry,You washing machine broke down,1,None,None,None
+37,0,Call a technician,Call a technician to fix it,0,-50,0,0
+37,0,Wear dirty clothes,Modern problems require modern solutions,0,0,0,-20
+38,0,Shoes,Your shoes tore,1,None,None,None
+38,0,Buy brandname,Buy the new popular shoe,0,-60,0,10
+38,0,Buy a random brand,No Adadas for me,0,-10,0,-10
+39,0,Sicilian Wedding,Your cousin is getting married in Sicily,1,None,None,None
+39,0,Go,Time to get a Don Corleone suit,0,-80,0,20
+39,0,Don't go,Miss it,0,0,0,-20
+40,0,Falling Money,You see someone drop a €20 note,1,None,None,None
+40,0,Keep it,Don't look a gift horse in the mouth,0,20,0,-10
+40,0,Give it back,Doing the right thing,0,0,0,10
+41,0,Pet Adoption,You see a notice for Dog adoption,1,None,None,None
+41,0,Adopt,Adopt the dog and buy it pet utilities,0,-30,0,20
+41,0,Sorry Fido,Opt out,0,0,0,-10
+42,0,New Laptop,Your laptop stops working,1,None,None,None
+42,0,Buy,Buy a new one,0,-400,0,0
+42,0,Opt Out,Stay without one,0,0,0,-20
+43,0,Winter is Coming,The weather is getting colder and you don't have a warm jacket,1,None,None,None
+43,0,Buy One,Let it snow,0,-70,0,0
+43,0,Skip,Stay without one,0,0,-20,-10
+44,0,Holiday,Your friends are going for a Holiday weekend in Gozo,1,None,None,None
+44,0,Join,Party timeee,0,-100,0,20
+44,0,Skip,Opt out,0,0,0,-20
+45,0,Cooking Course,ITS are offering a new cooking course and you're interested,1,None,None,None
+45,0,Join,#MasterChef,0,-100,0,20
+45,0,Opt Out,Gordon Ramsay would just yell at me anyway,0,0,0,-20
+46,0,Piano Lessons,You want to join a Piano lesson,1,None,None,None
+46,0,Join,Join the lesson,0,-80,0,10
+46,0,Opt Out,Opt out,0,0,0,-10
+47,0,Dance Lessons,You see an advert for a Dancing course,1,None,None,None
+47,0,Join,Do you think ABBA need more backup dancers?,0,-80,0,20
+47,0,Opt Out,Opt out,0,0,0,-10
+48,0,New Laptop,Your laptop stops working,1,None,None,None
+48,0,Buy,Buy a new one,0,-400,0,0
+48,0,Opt Out,Stay without one,0,0,0,-20
+49,0,Winter is Coming,The weather is getting colder and you don't have a warm jacket,1,None,None,None
+49,0,Buy One,Let it snow,0,-70,0,0
+49,0,Skip,Stay without one,0,0,-20,-10
+50,0,Holiday,Your friends are going for a Holiday weekend in Gozo,1,None,None,None
+50,0,Join,Party timeee,0,-100,0,20
+50,0,Skip,Opt out,0,0,0,-20
+51,0,Cooking Course,ITS are offering a new cooking course and you're interested,1,None,None,None
+51,0,Join,#MasterChef,0,-100,0,20
+51,0,Opt Out,Gordon Ramsay would just yell at me anyway,0,0,0,-20
+52,0,Piano Lessons,You want to join a Piano lesson,1,None,None,None
+52,0,Join,Join the lesson,0,-80,0,10
+52,0,Opt Out,Opt out,0,0,0,-10
+53,0,Dance Lessons,You see an advert for a Dancing course,1,None,None,None
+53,0,Join,Do you think ABBA need more backup dancers?,0,-80,0,20
+53,0,Opt Out,Opt out,0,0,0,-10

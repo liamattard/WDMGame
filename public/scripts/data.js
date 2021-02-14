@@ -194,14 +194,14 @@ function update(source) {
     .append("rect")
     .attr("width", function (d) {
       if (d.isParent == "1") {
-        return rectW*3;
+        return rectW*3.5;
       }else{
         return rectW*2;
       }
     })
     .attr("height", function (d) {
       if (d.isParent == "1") {
-        return rectH*1.2;
+        return rectH*1.6;
       }else{
         return rectH*2;
       }
@@ -210,7 +210,7 @@ function update(source) {
     .attr("ry", 6)
     .attr("x", function (d) {
       if (d.isParent == "1") {
-        return -100;
+        return -110;
       }else{
         return -50;
       }

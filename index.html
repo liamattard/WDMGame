@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="stylesheets/timeline.css">
     <link rel="stylesheet" href="stylesheets/style.css">
     <link rel="stylesheet" href="stylesheets/smiley.css">
+    <link rel="stylesheet" href="stylesheets/moneyshot.css">
     <script src="scripts/script.js"></script>
     <script src="scripts/generateStory.js"></script>
     <script src="https://d3js.org/d3.v3.min.js"></script>
@@ -27,7 +28,26 @@
     <div id="intro">
 
         <h1 id="intro_title">Kampa <br>
-        Survive, Withstand, Get by.</h1>
+        Survive, Withstand, Get by.
+
+            <p style= 'font-size:20px'>
+
+            Instructions:
+
+            <br>
+            The goal of this game is to make decisions throughout a
+            span of 31 days without reaching zero happiness/ health or
+            balance.
+
+            <br>
+
+            Each day you will be presented with a choice which will
+            impact your overall scores
+
+
+            </p>
+
+        </h1>
 
         <h1 class="text" id="0"> Over 45,000 Maltese people are
         unemployed</h1>
@@ -48,12 +68,12 @@
 
     <div id="timeline" class="timeline active">
 
-        <span id="current_day" class="current_day no_opacity">
-            <h5>Day</h5>
-            <hr>
-            <h1 id="date"></h1>
-        </span>
+    </div>
 
+    <div id="current_day" class="current_day no_opacity">
+        <h5>Day</h5>
+        <hr  width="100px" >
+        <h1 id="date"></h1>
     </div>
 
     <div id="balance" class="details no_opacity">
@@ -97,6 +117,40 @@
     </div>
 
     <script src="scripts/data.js"></script>
+
+
+    <div class="moneyShot">
+        <div class="loader">
+        <span></span>
+        <span></span>
+        <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        <span></span>
+        <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        <span></span>
+        <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        <span></span>
+        <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+    </div>
 
 </body>
 

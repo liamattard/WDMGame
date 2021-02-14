@@ -6,6 +6,7 @@ var officeJobEvents = Array();
 var eventsList = Array();
 var lowHealth = Array();
 var lowHappiness = Array();
+var carEvents = Array();
 
 
 // O(N^2) algorithm imma fuck it mghandix aptit nahseb :)
@@ -51,8 +52,8 @@ function readTextFile(file) {
               if (child_id == parent_id && child_status == 0) {
 
                 child_object = new Object();
-                child_object["description"] = child_properties[2];
-                child_object["name"] = child_properties[3];
+                child_object["description"] = child_properties[3];
+                child_object["name"] = child_properties[2];
                 child_object["Money"] = child_properties[5]; 
                 child_object["Health"] = child_properties[6]; 
                 child_object["Happiness"] = child_properties[7]; 
@@ -62,17 +63,33 @@ function readTextFile(file) {
               }
             }
             if(type == 0){
+
               normalEvents.push(parent_object);
-            } else if (type == 2){
-              restaurantEvents.push(parent_object);
-            } else if (type == 3){
-              officeJobEvents.push(parent_object);
+
             } else if (type == 1){
+
               nurseryEvents.push(parent_object);
+              
+            } else if (type == 2){
+
+              restaurantEvents.push(parent_object);
+
+            } else if (type == 3){
+
+              officeJobEvents.push(parent_object);
+
             } else if (type == 4){
+
               lowHealth.push(parent_object);
+
             } else if (type == 5){
+
               lowHappiness.push(parent_object);
+
+            } else if (type == 6){
+
+              carEvents.push(parent_object);
+
             }
           }
         }
@@ -100,7 +117,7 @@ function generateJobs(){
   Nursery["name"] = "Nursery Teacher";
   Nursery["children"] = [];
   Nursery["description"] = "Take care of toddlers."
-  Nursery["Happiness"] = "+10";
+  Nursery["Happiness"] = "+10 /7 days";
   Nursery["Money"] = "+70/ 7 days";
   Nursery["Health"] = "+0";
   Nursery.changeDay = false;
@@ -124,7 +141,7 @@ function generateJobs(){
   OfficeJob["name"] = "Boring Office Job";
   OfficeJob["children"] = [];
   OfficeJob["description"] = "Drinking coffee and counting money.";
-  OfficeJob["Happiness"] = "-10";
+  OfficeJob["Happiness"] = "-10/ 7 days";
   OfficeJob["Money"] = "+200/ 7 days";
   OfficeJob["Health"] = "+0";
   OfficeJob.changeDay = false;
@@ -167,7 +184,7 @@ function generateHouses(root){
   Garage.changeDay = false;
   Garage["children"] =  [];
   Garage["description"] = ""
-  Garage["Happiness"] = "-5";
+  Garage["Happiness"] = "-5/ 7 days";
   Garage["Money"] = "-35/ 7 days";
   Garage["Health"] = "+0";
   Garage["isParent"] = "0";
@@ -188,7 +205,7 @@ function generateHouses(root){
   Nice["name"] = "Nice Apartment";
   Nice["children"] = [];
   Nice["description"] = ""
-  Nice["Happiness"] = "+10";
+  Nice["Happiness"] = "+10/ 7 days";
   Nice["Money"] = "-100/ 7 days";
   Nice["Health"] = "+0";
   Nice["isParent"] = "0";
@@ -219,7 +236,7 @@ function carOrBus(root){
     Bus.changeDay = false;
     Bus["children"] =  [];
     Bus["description"] = "Travel to work by bus everyday."
-    Bus["Happiness"] = "-10";
+    Bus["Happiness"] = "-10/ 7 days";
     Bus["Money"] = "-35/ 7 days";
     Bus["Health"] = "+0";
     Bus["isParent"] = "0";
@@ -229,7 +246,7 @@ function carOrBus(root){
     Car["name"] = "By Car";
     Car["children"] = [];
     Car["description"] = "Travel to work by car everyday."
-    Car["Happiness"] = "+20";
+    Car["Happiness"] = "+20/ 7 days";
     Car["Money"] = "-100/ 7 days";
     Car["Health"] = "+0";
     Car.changeDay = false;
@@ -251,6 +268,8 @@ function shuffleArray(array) {
       array[j] = temp;
   }
 }
+
+done = false;
 
 function generateEvents(root){
 
@@ -274,27 +293,31 @@ function generateEvents(root){
         eventsList = eventsList.concat(normalEvents);
 
       }
+      if (currentPlayer.transportation == 2){
+
+        eventsList = eventsList.concat(carEvents);
+
+      }
 
       shuffleArray(eventsList);
 
     }
 
-    // if(currentPlayer.happiness < 25){
+    if(currentPlayer.happiness < 25){
 
-    //   shuffleArray(lowHappiness);
-    //   root._children.push(lowHappiness[0]);
+      eventsList = eventsList.concat(lowHappiness);
+      shuffleArray(eventsList);
 
-    // } else if (currentPlayer.health < 25){
+    } else if (currentPlayer.health < 25){
 
-    //   shuffleArray(lowHealth);
-    //   root._children.push(lowHealth[0]);
+      eventsList = eventsList.concat(lowHealth);
+      shuffleArray(eventsList);
 
-    // } else {
+    } 
 
-      root._children.push(eventsList[0]);
-      eventsList.shift();
+    root._children.push(eventsList[0]);
+    eventsList.shift();
 
-    // }
 
 
 
