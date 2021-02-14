@@ -116,6 +116,7 @@ var diagonal = d3.svg.diagonal().projection(function (d) {
 console.log(screen.width, screen.height);
 
 svg_width = 30000;
+// zm.translate([350, 20]).scale(2.5);
 
 
 var svg = d3
@@ -125,15 +126,31 @@ var svg = d3
   .attr("align", "center")
   .attr("width", svg_width)
   .attr("height",30000)
-  .call((zm = d3.behavior.zoom().scaleExtent([1, 3]).on("zoom", null)))
+  .call((zm = d3.behavior.zoom().on("zoom", zoomAndDrag)))
   .append("g")
   .attr("transform","translate(" + svg_width/1.89 +"," +screen.height / 7 +")scale("+scale+","+scale+")");
 
 document.getElementById("graph").style.left = -(svg_width/2)
 
 
+function zoomAndDrag() {
+  //var scale = d3.event.scale,
+  var scale = 1,
+      translation = d3.event.translate,
+      tbound = -height * scale,
+      bbound = height * scale,
+      lbound = (-width + margin.right) * scale,
+      rbound = (width - margin.left) * scale;
+  // limit translation to thresholds
+  translation = [
+      Math.max(Math.min(translation[0], rbound), lbound),
+      Math.max(Math.min(translation[1], bbound), tbound)
+  ];
+  d3.select('.drawarea')
+      .attr('transform', 'translate(' + translation + ')' +
+            ' scale(' + scale + ')');
+}
 //necessary so that zoom 9nows where to zoom and unzoom from
-zm.translate([350, 20]).scale(2.5);
 
 root.x0 = 0;
 root.y0 = height / 2;
@@ -201,7 +218,7 @@ function update(source) {
     })
     .attr("height", function (d) {
       if (d.isParent == "1") {
-        return rectH*1.6;
+        return rectH*1.2;
       }else{
         return rectH*2;
       }
@@ -468,7 +485,7 @@ function redraw() {
 function move(length, index) {
   if (length == 2) {
     if (index == 0) {
-      return screen.width/9.3;
+      return screen.width/9.75;
     } else {
       return -(screen.width/9.75);
     }
@@ -511,4 +528,54 @@ function chooseColour(string) {
 
   return [quantity, color];
 
+}
+
+
+dragElement(document.getElementById("body"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id)) {
+    // if present, the header is where you move the DIV from:
+    document.getElementById(elmnt.id).onmousedown = dragMouseDown;
+  } else {
+    // otherwise, move the DIV from anywhere inside the DIV:
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    if(pos1 < 0){
+      pos1 -= 100
+    }else{
+      pos1 += 100
+    }
+  
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // stop moving when mouse button is released:
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
 }
