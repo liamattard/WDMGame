@@ -1,8 +1,6 @@
 var root = generateJobs();
 var scale = screen.width/900;
 
-
-
 function click(d) {
 
   if (!d.children) {
@@ -210,7 +208,7 @@ function update(source) {
     .attr("ry", 6)
     .attr("x", function (d) {
       if (d.isParent == "1") {
-        return -100;
+        return -90;
       }else{
         return -50;
       }

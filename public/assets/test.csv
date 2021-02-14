@@ -1,14 +1,14 @@
 ID,Type,Title,Description,Parent,Price,Health,Happiness
-0,0,your friend suggests buying an ice cream,You’re at the beach,1,None,None,None
-0,0,None,Buy One,0,-10,-20,20
-0,0,None,Opt Out,0,0,0,-10
-1,0,Your friend asks if you want to join a gym with them.,You’re not feeling fit,1,None,None,None
-1,0,None,Join,0,-25,20,10
-1,0,Remember your Health!,Opt Out,0,0,-20,-10
+0,1,your friend suggests buying an ice cream,You're at the beach,1,None,None,None
+0,1,None,Buy One,0,-10,-20,20
+0,1,None,Opt Out,0,0,0,-10
+1,1,Your friend asks if you want to join a gym with them.,You're not feeling fit,1,None,None,None
+1,1,None,Join,0,-25,20,10
+1,1,Remember your Health!,Opt Out,0,0,-20,-10
 2,0,None,Your fridge is empty,1,None,None,None
 2,0,None,Buy groceries for a week,0,-12,10,0
 2,0,Remember your Health!,Buy takeout for today,0,-10,-10,20
-3,0,None,There’s a new lottery.,1,None,None,None
+3,0,None,There's a new lottery.,1,None,None,None
 3,0,None,Buy a Ticket,0,-10,0,0
 3,0,None,Opt Out,0,0,0,-10
 4,0,None,Your electricity and water bill comes in,1,None,None,None
@@ -26,16 +26,16 @@ ID,Type,Title,Description,Parent,Price,Health,Happiness
 8,0,None,You see an advert on Facebook for a day trip to Sicily.,1,None,None,None
 8,0,None,Go to Sicily,0,-100,0,30
 8,0,None,Opt out,0,0,0,-20
-9,0,None,Your Kid has a piano recital but you have been given the chance to work overtime,1,None,None,None
-9,0,None,Work Overtime,0,50,0,-20
-9,0,None,Go to recital,0,0,0,20
+9,2,None,Your Kid has a piano recital but you have been given the chance to work overtime,1,None,None,None
+9,2,None,Work Overtime,0,50,0,-20
+9,2,None,Go to recital,0,0,0,20
 10,0,None,Your dog swallows some chocolate,1,None,None,None
 10,0,None,Take him to the vet,0,-100,0,0
 10,0,None,Don't take him,0,0,0,-30
 11,0,None,The internet rates are going up but your kids need it for school work,1,None,None,None
 11,0,None,Continue Paying Bill,0,-40,0,0
 11,0,None,Disconnect Service,0,0,0,-20
-12,0,None,"At the grocery store, your child notices a lollipop",1,None,None,None
+12,0,None,At the grocery store, your child notices a lollipop,1,None,None,None
 12,0,None,Buy it,0,-5,0,10
 12,0,None,Don't buy it,0,0,0,-10
 13,0,None,You Dropped Your Phone & The Screen Cracked,1,None,None,None
@@ -53,19 +53,19 @@ ID,Type,Title,Description,Parent,Price,Health,Happiness
 17,5,None,Your friend asks you to go out for dinner to get some stuff off your chest.,1,None,None,None
 17,5,None,Go Out,0,-30,0,20
 17,5,You might feel sad!,Stay Home,0,0,0,-10
-18,5,None,"You have recently been diagnosed with depression, the medication costs 35 euro per month",1,None,None,None
+18,5,None,You have recently been diagnosed with depression, the medication costs 35 euro per month,1,None,None,None
 18,5,None,Buy,0,-35,10,20
 18,5,None,Don't Buy,0,0,0,-10
-19,4,None,Your Mum tells you you’re looking unhealthy.,1,None,None,None
+19,4,None,Your Mum tells you you're looking unhealthy.,1,None,None,None
 19,4,None,Go to a Nutrionist,0,-30,20,10
 19,4,Your Health is Important!,Refuse to Go,0,0,-20,-10
 20,4,None,You start feeling some pains and aches,1,None,None,None
 20,4,None,Take sick leave from work and go to the doctor,0,-30,20,10
 20,4,None,Ignore,0,0,-10,-10
-21,4,None,"While on a routine checkup, your doctor recommends that you get some blood tests done, but it’s not covered by insurance",1,None,None,None
+21,4,None,While on a routine checkup, your doctor recommends that you get some blood tests done, but it's not covered by insurance,1,None,None,None
 21,4,None,Get tested,0,-100,20,10
-21,4,None,Don't test,0,0,-10,-10
-22,2,None,It’s the holiday season and the restaurant is extra busy,1,None,None,None
+21,4,None,Don't  test,0,0,-10,-10
+22,2,None,It's the holiday season and the restaurant is extra busy,1,None,None,None
 22,2,None,Work extra hours but miss out on family and friend events,0,75,0,-10
 22,2,None,Keep working your usual hours,0,0,0,10
 23,2,None,Your co-worker asks if you want to steal and drink some alcohol from the restaurant with them,1,None,None,None
@@ -76,26 +76,26 @@ ID,Type,Title,Description,Parent,Price,Health,Happiness
 24,2,None,Go Home,0,0,0,-10
 25,3,None,Your boss asks you to work overtime and stay at the office overnight to finish your work.,1,None,None,None
 25,3,None,Work overnight,0,100,-10,-10
-25,3,None,Tell your boss that you’ll finish the work some other time,0,0,0,0
+25,3,None,Tell your boss that you'll finish the work some other time,0,0,0,0
 26,3,None,Your co-worker asks if you want to take an extra long lunch break and miss the rest of the workday with them,1,None,None,None
 26,3,None,Join,0,0,0,20
 26,3,None,Opt out,0,0,0,0
 27,3,None,Your colleagues are organising Secret Santa.,1,None,None,None
 27,3,None,Join them,0,-25,0,10
 27,3,You might save money but remembber your happiness,Opt out,0,0,0,-20
-28,1,None,The parents of one of your students ask you if you’d like to babysit over the weekend.,1,None,None,None
+28,1,None,The parents of one of your students ask you if you'd like to babysit over the weekend.,1,None,None,None
 28,1,None,Babysit,0,50,0,0
 28,1,None,Decline,0,0,0,0
-29,1,None,You wake up but you don’t feel like going to work.,1,None,None,None
+29,1,None,You wake up but you don't feel like going to work.,1,None,None,None
 29,1,None,Lie and Call in Sick,0,0,0,10
 29,1,None,Go to work anyway,0,0,0,-10
 30,1,None,The other teachers in your nursery are giving Christmas presents to their students,1,None,None,None
 30,1,None,Give Presents,0,-30,0,10
 30,1,None,Opt out,0,0,0,-20
-31,0,None,"While on your way to work, you notice that the check engine light is on, however you only have enough money to either get it fixed or get groceries.",1,None,None,None
+31,0,None,While on your way to work, you notice that the check engine light is on, however you only have enough money to either get it fixed or get groceries.,1,None,None,None
 31,0,None,Fix your car,0,-50,0,0
 31,0,You might save money however you will miss your car,Leave it,0,0,0,-20
-32,0,None,"While on your way to an important meeting, your car breaks down.",1,None,None,None
+32,0,None,While on your way to an important meeting, your car breaks down.,1,None,None,None
 32,0,None,Walk it,0,0,0,-20
 32,0,None,Get a Taxi,0,-20,0,0
 33,0,None,Your car needs Fuel,1,None,None,None

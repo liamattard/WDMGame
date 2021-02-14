@@ -41,6 +41,7 @@ html, body {
     left: 15px;
     top: 95%;
     transform: rotate(270deg);
+    transition: all 1s ease;
     transform-origin: top left;
 }
 
@@ -227,18 +228,18 @@ svg {
 .node_description {
     position: absolute;
     text-align: left;
-    width: 100px;
-    height: 80px;
-    padding: 8px;
+   
     font: 10px sans-serif;
-    background: #ddd;
-    border: solid 1px #aaa;
-    border-radius: 8px;
     pointer-events: none;
-}
 
+
+}
 .node .description {
     font-size: 7px;
+    border-radius: 55px;
+background: linear-gradient(145deg, #171e22, #1c2329)!important;
+box-shadow:  31px 31px 63px #14191d,
+             -31px -31px 63px #212930;
 }
 
 .node .attributes {
@@ -252,4 +253,26 @@ svg {
 
 .node title{
     height: 25px!important;
+}
+
+
+
+#balance{
+    
+    transition: all 2s ease;
+
+}
+#cube_scene{
+   
+    transition: all 2s ease;
+
+}
+#current_day{
+    
+    transition: all 2s ease;
+
+}
+#progress_bar{
+  
+    transition: all 2s ease;
 }
